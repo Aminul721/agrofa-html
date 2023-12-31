@@ -1,0 +1,882 @@
+.about-one {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        padding: 80px 0;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 2;
+
+        &__info {
+            position: absolute;
+            right: 42px;
+            bottom: 55px;
+            width: 278px;
+            background-color: $agrofa-white;
+            padding: 38px 30px 41px 100px;
+            box-shadow: 15px 29px 87px 0px rgba(0, 0, 0, 0.1);
+
+            &::after {
+                position: absolute;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                left: 10px;
+                top: 10px;
+                content: '';
+                border-width: 2px;
+                border-style: solid;
+                border-image: linear-gradient(-45deg, rgba($agrofa-base-rgb, 1) 0%, rgba($agrofa-black-rgb, 1) 100%) 1;
+                z-index: -1;
+            }
+
+            @media (max-width: 767px) {
+                position: relative;
+                right: 0;
+                left: 0;
+                bottom: 35px;
+                margin: auto;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                bottom: -45px;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+
+            &:hover &__icon span {
+                transform: rotateY(180deg);
+            }
+
+            &__icon {
+                position: absolute;
+                left: 40px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 50px;
+                height: 50px;
+                background-color: $agrofa-base;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: $agrofa-white;
+
+                span {
+                    display: block;
+                    -webkit-transition: all 0.6s ease;
+                    -o-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+                }
+            }
+
+            &__title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1;
+                color: $agrofa-text;
+                margin: 0 0 8px;
+                font-family: $agrofa-font;
+            }
+
+            &__text {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1;
+                color: $agrofa-black;
+                margin: 0;
+                font-family: $agrofa-font;
+
+                a {
+                    color: inherit;
+                    background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+
+                    &:hover {
+                        color: $agrofa-base;
+                        background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            right: -14px;
+            bottom: -60px;
+            z-index: -1;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
+
+            img {
+                max-width: 100%;
+                -webkit-animation-name: float-bob-y-2;
+                animation-name: float-bob-y-2;
+                -webkit-animation-duration: 4s;
+                animation-duration: 4s;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+            }
+        }
+    }
+
+    &__double-image {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-left: 90px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__flower {
+        position: absolute;
+        left: -80px;
+        bottom: -80px;
+        background-color: $agrofa-gray;
+        overflow: hidden;
+        width: 87.8%;
+        height: 88.3%;
+        z-index: -1;
+        background-position: -42px 123%;
+        background-repeat: no-repeat;
+        background-size: auto;
+
+        @media (max-width: 991px) {
+            left: 0;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .sec-title {
+        padding-bottom: 36px;
+    }
+
+    &__content {
+        position: relative;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-top: 120px;
+        }
+
+        @media (min-width: 1200px) {
+            padding-left: 70px;
+        }
+
+        &__list {
+            margin: 0 0 30px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                background-color: $agrofa-white;
+                box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.07);
+                text-transform: uppercase;
+                font-weight: 700;
+                color: $agrofa-black;
+                font-family: $agrofa-heading-font;
+                padding: 11px 54px 11px 31px;
+
+                @media (max-width: 767px) {
+                    max-width: 240px;
+                    margin-bottom: 10px;
+                }
+
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    padding: 11px 30px 11px 25px;
+                }
+
+                span {
+                    display: inline-block;
+                    font-size: 24px;
+                    margin-right: 7px;
+                    color: $agrofa-base;
+                    -webkit-transition: all 0.6s ease;
+                    -o-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+                }
+
+                &:hover span {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+
+        &__text-one {
+            font-size: 20px;
+            line-height: 34px;
+            color: $agrofa-base;
+            margin: 0 0 34px;
+        }
+
+        &__text-two {
+            line-height: 30px;
+            margin: 0 0 42px;
+        }
+
+        &__author-wrapper {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                .agrofa-btn {
+                    padding: 16.25px 27px;
+                }
+            }
+        }
+
+        &__author {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 58px;
+            margin: 0 0 0 20px;
+
+            @media (max-width: 767px) {
+                margin: 20px 0 0;
+            }
+
+            &__thumb {
+                width: 58px;
+                height: 58px;
+                background-color: $agrofa-base;
+                border-radius: 50%;
+                padding: 4px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            &__meta {
+                display: block;
+                position: relative;
+                margin: 0;
+                padding-left: 15px;
+                font-size: 14px;
+
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.about-two {
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &::before {
+        width: 138px;
+        height: 347px;
+        top: 75px;
+        background-image: url('../images/shapes/about-effect2-1-.png');
+        animation: movingLeftRightChose3 3.5s linear infinite alternate;
+        @keyframes movingLeftRightChose3 {
+            0% {
+                transform: translate(0, 0) rotateZ(0);
+            }
+            50% {
+                transform: translate(-8px, -8px) rotateZ(-6deg);
+            }
+            100% {
+                transform: translate(-15px, -15px) rotateZ(-12deg);
+            }
+        }
+        @media (max-width: 1400px) {
+            width: 100px;
+            height: 235px;
+            top: 32px
+        }
+        @media (max-width: 1200px) {
+            width: 70px;
+            height: 170px;
+        }
+        @media (max-width: 991px) {
+            width: 50px;
+            height: 110px;
+            top: -22px;
+        }
+    }
+    &::after {
+        width: 340px;
+        height: 188px;
+        top: initial;
+        bottom: 126px;
+        background-image: url('../images/shapes/about-effect2-2-.png');
+        animation: movingLeftRightChose4 3.5s linear infinite alternate;
+        @keyframes movingLeftRightChose4 {
+            0% {
+                transform: rotateZ(0);
+            }
+            25% {
+                transform: rotateZ(-2deg);
+            }
+            50% {
+                transform: rotateZ(-4deg);
+            }
+            75% {
+                transform: rotateZ(-8deg);
+            }
+            100% {
+                transform: rotateZ(-15deg);
+            }
+        }
+        @media (max-width: 1400px) {
+            width: 175px;
+            height: 90px;
+            bottom: 90px;
+        }
+        @media (max-width: 1200px) {
+            width: 120px;
+            height: 65px;
+        }
+        @media (max-width: 991px) {
+            bottom: 26px;
+        }
+    }
+    &__effect-bg {
+        position: absolute;
+        width: 100%;
+        max-width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding-right: 80px;
+        animation: movingLeftRightChose2 2.5s linear infinite alternate;
+        display: none;
+        @keyframes movingLeftRightChose2 {
+            from {
+                transform: translate(0, 0);
+            } to {
+                transform: translate(-10px, -10px);
+            }
+        }
+        & > img {
+            width: 100% !important;
+            height: 100%;
+            max-height: 890px;
+            display: block;
+            object-fit: cover;
+            object-position: left top;
+        }
+        @media (max-width: 1400px) {
+            padding-right: 20px;
+        }
+        @media (min-width: 992px) {
+            display: block;
+        }
+    }
+
+    .container-fluid {
+        padding-left: 0;
+        padding-top: 80px;
+        padding-bottom: 115px;
+        position: relative;
+        z-index: 3;
+        @media (max-width: 991px) {
+            padding-top: 40px;
+            padding-bottom: 58px;
+        }
+    }
+    &__content-row {
+        align-items: center;
+    }
+    &__left {
+        width: 50%;
+        padding-right: 94px;
+        @media (max-width: 1400px) {
+            padding-right: 36px;
+        }
+        @media (max-width: 991px) {
+            width: 100%;
+            padding: 0 0 35px 15px;
+        }
+
+        &__all-product {
+            padding-top: 22px;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -48px;
+            @media (max-width: 991px) {
+                padding-top: 0;
+                margin-top: 0;
+            }
+        }
+        &__bg {
+            min-height: 186px;
+            background-color: $agrofa-yellow;
+            width: fit-content;
+            max-width: 253px;
+            border-radius: 25px 0 25px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 32px;
+            position: relative;
+            @media (max-width: 991px) {
+                width: 100%;
+                max-width: 100%;
+                min-height: 152px;
+                border-radius:0;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 90px;
+                height: 120px;
+                top: -56px;
+                left: -21px;
+                z-index: 1;
+                background-image: url('../images/shapes/choose-tree1-1.png');
+                background-repeat: no-repeat;
+                background-position: top left;
+                background-size: 89px auto;
+                animation: movingLeftRightChose 1.5s linear infinite alternate;
+                @keyframes movingLeftRightChose {
+                    from {
+                        transform: translate(0, 0) rotate(0);
+                    } to {
+                        transform: translate(12px, 12px) rotate(12deg);
+                    }
+                }
+                @media (max-width: 991px) {
+                    width: 65px;
+                    height: 88px;
+                    top: -56px;
+                    left: 0;
+                    background-size: 64px auto;
+                }
+            }
+        }
+        &__count-product {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1;
+            color: $agrofa-text;
+            margin-bottom: 16px;
+            @media (max-width: 991px) {
+                font-size: 32px;
+                margin-bottom: 8px;
+            }
+        }
+        &__pure-product {
+            font-size: 26px;
+            line-height: 34px;
+            font-weight: 500;
+            color: $agrofa-text;
+            margin-bottom: 0;
+            @media (max-width: 991px) {
+                font-size: 22px;
+                line-height: 24px;
+            }
+        }
+    }
+    &__left-img {
+        width: 100%;
+        img {
+            width: 100% !important;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        .section-common-title {
+            max-width: 588px;
+            padding-left: 8px;
+            @media (max-width: 991px) {
+                max-width: initial;
+                padding: 0;
+            }
+        }
+        @media (max-width: 991px) {
+            width: 100%;
+            padding: 0 15px 0 30px;
+        }
+    }
+    &__chose-reasone {
+        margin-left: 9px;
+    }
+    &__text {
+        padding-right: 10px;
+    }
+
+    &__featurebx {
+        max-width: 488px;
+        padding-top: 37px;
+        @media (max-width: 991px) {
+            max-width: 100%;
+            padding-top: 20px;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 18px;
+        border-bottom: 1px solid #ddd4ce;
+        padding-bottom: 24px;
+        margin-bottom: 33px;
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        &:hover {
+            .about-two__cricle {
+                background-color: $agrofa-yellow;
+                color: $agrofa-text;
+            }
+            .about-two__icon {
+                color: $agrofa-text;
+            }
+        }
+    }
+    &__cricle {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background-color: $agrofa-green;
+        border: 2px solid $agrofa-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+    }
+    &__icon {
+        color: $agrofa-white;
+        font-size: 40px;
+        line-height: 1;
+        transition: all 0.5s;
+    }
+    &__quality-info-bx {
+        width: calc(calc(100% - 100px) / 1);
+    }
+    &__quality-title {
+        font-family: $agrofa-font;
+        font-size: $heading-size6;
+        font-weight: 600;
+        line-height: 1.1;
+        color: $agrofa-text3;
+        margin-bottom: 11px;
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 1;
+        }
+    }
+    &__quality-info {
+        line-height: 30px;
+        font-weight: 400;
+        color: $agrofa-text3;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        @media (max-width: 767px) {
+            line-height: 27px;
+        }
+    }
+    &__quality-list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 48px;
+        margin-bottom: 0;
+        @media (max-width: 767px) {
+            margin-top: 30px;
+        }
+        & > li {
+            list-style: none;
+            font-family: $agrofa-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: $agrofa-text3;
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+            &:last-child{ margin-bottom: 0; }
+            & > i {
+                color: $agrofa-green;
+                margin-right: 9px;
+            }
+        }
+    }
+}
+
+.about-three {
+    position: relative;
+    padding: 21px 0 120px;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        padding: 0 0 80px;
+    }
+
+    &__thumb {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+
+        @media (max-width: 1199px) {
+            margin: 0 0 50px;
+        }
+
+        >img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        &__flower {
+            position: absolute;
+            left: -36px;
+            top: -15px;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
+
+            img {
+                -webkit-animation-name: treeMove;
+                animation-name: treeMove;
+                -webkit-animation-duration: 4s;
+                animation-duration: 4s;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+            }
+        }
+
+        &__border {
+            position: absolute;
+            left: -37px;
+            bottom: 58px;
+            z-index: -1;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
+
+            img {
+                -webkit-animation: rotated 15s infinite linear;
+                animation: rotated 15s infinite linear;
+            }
+
+            @keyframes rotated {
+                0% {
+                    transform: rotate(0);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        &__round {
+            width: 112px;
+            height: 112px;
+            background-color: $agrofa-base;
+            border-radius: 50%;
+            position: absolute;
+            left: -20px;
+            bottom: 0;
+            animation: animationFrames 20s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes animationFrames {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg) scale(1);
+            }
+
+            20% {
+                transform: translate(73px, -1px) rotate(36deg) scale(0.9);
+            }
+
+            40% {
+                transform: translate(141px, 72px) rotate(72deg) scale(1);
+            }
+
+            60% {
+                transform: translate(83px, 122px) rotate(108deg) scale(1.2);
+            }
+
+            80% {
+                transform: translate(-40px, 72px) rotate(144deg) scale(1.1);
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotate(0deg) scale(1);
+            }
+        }
+    }
+
+    &__con-middle {
+        position: relative;
+        margin-left: -30px;
+        padding-right: 45px;
+        margin-top: -12px;
+
+        @media (max-width: 1199px) {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__title {
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 23px;
+        }
+
+        &__text-one {
+            font-size: 22px;
+            line-height: 34px;
+            font-weight: 600;
+            color: $agrofa-base;
+            margin-bottom: 30px;
+        }
+
+        &__text-two {
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 42px;
+        }
+    }
+
+    &__con-right {
+        position: relative;
+        margin-left: -30px;
+        margin-top: -12px;
+
+        @media (max-width: 1199px) {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 767px) {
+            margin: 40px 0 0;
+        }
+
+        &__title {
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: 34px;
+            font-size: 18px;
+            line-height: 40px;
+
+            span {
+                font-size: 16px;
+                position: absolute;
+                left: 0;
+                top: 2px;
+                bottom: 0;
+                margin: auto;
+                line-height: inherit;
+                color: $agrofa-base;
+            }
+        }
+    }
+
+    &__author {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 58px;
+        margin: 29px 0 0;
+        padding: 29px 0 0;
+        border-top: 6px solid $agrofa-gray;
+
+        @media (min-width: 992px) and (max-width: 1199px) {}
+
+        @media (max-width: 991px) {}
+
+        &__thumb {
+            width: 58px;
+            height: 58px;
+            background-color: $agrofa-base;
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0px 10px 30px 0px rgba($agrofa-black3-rgb, 0.07);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        &__meta {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+
+            img {
+                display: block;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}

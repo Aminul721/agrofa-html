@@ -1,0 +1,203 @@
+.project-details {
+    padding-top: 118px;
+    @media (max-width: 991px) {
+        padding-top: 62px;
+    }
+    &__wrap {
+        @media (max-width: 1200px) {
+            max-width: 100%;
+        }
+    }
+    &__thum-image {
+        width: 100%;
+        margin-bottom: 30px;
+        img {
+            width: 100% !important;
+            min-height: 675px;
+            max-height: 675px;
+            object-fit: cover;
+            border-radius: 4px !important;
+            @media (max-width: 767px) {
+                min-height: 350px;
+                max-height: 350px;
+            }
+        }
+    }
+    &__row {
+        gap: 0 30px;
+        @media (max-width: 1200px) {
+            gap: 0 20px;
+        }
+        @media (max-width: 991px) {
+            gap: 15px 0;
+        }
+    }
+    &__content {
+        width: calc(calc(70.2% - 15px) / 1);
+        @media (max-width: 1200px) {
+            width: calc(calc(70.2% - 10px) / 1);
+        }
+        @media (max-width: 991px) {
+            width: calc(calc(100% - 0px) / 1);
+        }
+    }
+    &__title {
+        color: $agrofa-text;
+        font-family: $agrofa-font;
+        font-size: 43px;
+        line-height: 51px;
+        font-weight: 700;
+        margin-bottom: 28px;
+        @media (max-width: 767px) {
+            font-size: 30px;
+            line-height: 38px;
+            margin-bottom: 12px;
+        }
+    }
+    &__text {
+        color: $agrofa-text;
+        font-weight: 400;
+        font-size: $body-size;
+        line-height: 32px;
+        margin-bottom: 22px;
+    }
+    &__subtitle {
+        color: $agrofa-text;
+        font-family: $agrofa-font;
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 600;
+        margin-bottom: 14px;
+        margin-top: 42px;
+        @media (max-width: 991px) {
+            margin-top: 25px;
+        }
+        &.color--green {
+            color: $agrofa-green;
+            line-height: 38px;
+            margin-bottom: 17px;
+            margin-top: 0;
+        }
+    }
+
+    &__challeng-wrap {
+        padding-top: 26px;
+        padding-bottom: 55px;
+        @media (max-width: 991px) {
+            padding-top: 16px;
+            padding-bottom: 40px;
+        }
+    }
+    &__challeng-image {
+        width: 242px;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        & > img {
+            width: 100% !important;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px !important;
+        }
+    }
+    &__challeng-content {
+        width: calc(calc(100% - 242px) / 1);
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        padding-left: 43px;
+        @media (max-width: 991px) {
+            padding-left: 30px;
+        }
+        @media (max-width: 767px) {
+            padding-left: 0;
+            padding-top: 30px;
+        }
+    }
+    &__challeng-title {
+        @extend .project-details__subtitle;
+        margin-top: 0;
+        margin-bottom: 17px;
+    }
+    &__challeng-text {
+        @extend .project-details__text;
+        margin-bottom: 0;
+    }
+    &__challeng-list {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        padding-top: 23px;
+        li {
+            @extend .project-details__text;
+            list-style: none;
+            position: relative;
+            margin-bottom: 0;
+            padding-left: 28px;
+            &::before {
+                font-family: "icomoon" !important;
+                content: "\e90f";
+                position: absolute;
+                width: auto;
+                height: auto;
+                left: 0;
+                top: 8px;
+                font-size: 17px;
+                line-height: 1;
+                color: $agrofa-text;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__sidebar-right {
+        width: calc(calc(29.8% - 15px) / 1);
+        margin-top: 8px;
+        @media (max-width: 1200px) {
+            width: calc(calc(29.8% - 10px) / 1);
+        }
+        @media (max-width: 991px) {
+            width: calc(calc(100% - 0px) / 1);
+        }
+    }
+    &__sidebar-single {
+        background-color: #e8fdf0;
+        border: 1px solid #e1ede5;
+        padding: 40px 42px 42px 42px;
+        @media (max-width: 1200px) {
+            padding: 24px;
+        }
+    }
+    &__single-col {
+        border-bottom: 1px solid #c6dccf;
+        padding-bottom: 14px;
+        margin-bottom: 13px;
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__single-item {
+        display: block;
+        color: $agrofa-text;
+        font-weight: 400;
+        font-size: $body-size;
+        line-height: 1;
+        padding-bottom: 10px;
+    }
+    &__single-name {
+        display: block;
+        color: $agrofa-text;
+        font-family: $agrofa-special-font;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1;
+    }
+    .project-sidebar--quick {
+        background-color: transparent;
+        padding: 0;
+        margin-top: 30px;
+    }
+}

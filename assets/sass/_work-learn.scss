@@ -1,0 +1,354 @@
+.work-learn-one {
+    position: relative;
+    background-color: #008d36;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 50px;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: #fffdf1;
+    }
+    &::before {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background-color: transparent;
+        background-image: url('../images/shapes/work-learn-bg1-2.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        opacity: 0.2;
+    }
+    &__wrap {
+        padding-top: 137px;
+        padding-bottom: 106px;
+        position: relative;
+        z-index: 3;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 74px;
+            bottom: 0;
+            z-index: 1;
+            background-image: url('../images/shapes/work-learn-bg1-1.png');
+            background-repeat: repeat-x;
+            background-position: bottom left 74px;
+        }
+        @media (max-width: 991px) {
+            max-width: 100% !important;
+            padding-bottom: 70px;
+        }
+    }
+    .section-common-title {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 68px;
+        padding-bottom: 86px;
+        @media (max-width: 991px) {
+            padding-bottom: 40px;
+        }
+    }
+    &__chose-reasone {
+        width: 100%;
+    }
+    &__chose-name {
+        margin-left: 0;
+        color: #bbdcc8;
+    }
+    &__title {
+        width: calc(calc(56% - 34px) / 1);
+        color: $agrofa-white;
+        margin-bottom: 0;
+        @media (max-width: 991px) {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+    &__text {
+        width: calc(calc(44% - 34px) / 1);
+        font-size: 18px;
+        line-height: 34px;
+        color: $agrofa-white3;
+        padding-right: 0;
+        margin-bottom: 0;
+        @media (max-width: 991px) {
+            font-size: 16px;
+            line-height: 32px;
+            width: 100%;
+        }
+    }
+    &__bx {
+        display: flex;
+        flex-wrap: wrap;
+        counter-reset: num-counter;
+        gap: 0 124px;
+        @media (max-width: 991px) {
+            gap: 36px 0;
+        }
+    }
+    &__col {
+        width: calc(calc(100% - 372px) / 4);
+        counter-increment: num-counter;
+        position: relative;
+        padding-top: 30px;
+        @media (max-width: 991px) {
+            width: calc(calc(100% - 0px) / 1);
+        }
+        &::after {
+            content: "0"counter( num-counter);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 57px;
+            height: 57px;
+            z-index: 4;
+            background-color: $agrofa-yellow;
+            border: 1px solid $agrofa-white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $agrofa-heading-font;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 600;
+            color: #008d36;
+            transition: all 0.3s;
+        }
+        &:hover {
+            &::after {
+                top: 10px;
+            }
+        }
+        &:last-child .work-learn-one__img::after { display: none; }
+    }
+    &__img {
+        margin-bottom: 16px;
+        position: relative;
+        @media (max-width: 991px) {
+            margin-bottom: 10px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 90%;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            z-index: 1;
+            background-image: url('../images/shapes/work-learn-bg1-1.png');
+            background-repeat: repeat-x;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    &__inner-img {
+        overflow: hidden;
+        border-radius: 58px;
+        border: 7px solid $agrofa-white;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            background-color: rgba($agrofa-text-rgb, 0.2);
+            transition: all 0.4s;
+        }
+        &:hover {
+            &::after {
+                height: 100%;
+            }
+        }
+        &:hover img {
+            transform: scale(1.2);
+        }
+        img {
+            position: relative;
+            z-index: 3;
+            width: 100% !important;
+            transition: all 0.5s;
+        }
+    }
+    &__work-title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+        color: $agrofa-white;
+        text-align: center;
+    }
+
+    &--two {
+        background-color: transparent;
+        margin-top: -122px;
+        padding-bottom: 119px;
+        @media (max-width: 767px) { padding-bottom: 60px;}
+        &::before, 
+        &::after { content: none; }
+        &__inner-bg {
+            position: relative;
+            max-width: 1530px;
+            background-color: #008d36;
+            margin: 0 auto;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                background-color: transparent;
+                background-image: url('../images/shapes/work-learn-bg1-2.png');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                opacity: 0.2;
+            }
+        }
+        .work-learn-one__wrap {
+            @media (max-width: 767px) { padding-bottom: 55px;}
+            &::after {
+                width: 100%;
+                max-width: 1034px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0 auto;
+                background-position: bottom left;
+            }
+        }
+        .work-learn-one__bx,
+        .section-common-title {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .eco-services-one--label {
+            padding: 0;
+        }
+    }
+
+    &--three {
+        &::after { content: none;}
+
+        .work-learn-one__wrap::after {
+            max-width: 1034px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-position: bottom left;
+        }
+    }
+
+    &--services {
+        &::after {
+            content: none;
+        }
+        .work-learn-one__wrap::after {
+            max-width: 1034px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-position: bottom left;
+        }
+    }
+
+    &--about {
+        &::after { content: none; }
+        .work-learn-one__wrap::after {
+            max-width: 1034px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-position: left bottom;
+        }
+    }
+}
+
+.eco-services-one--label {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -82px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 194px;
+    z-index: 2;
+    @media (max-width: 1440px) {
+        padding: 0 90px;
+    }
+    @media (max-width: 1200px) {
+        top: -59px;
+        padding: 0 20px;
+    }
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto 0;
+            z-index: 1;
+            background-color: $agrofa-yellow;
+        }
+        &::before {
+            left: initial;
+            right: 50%;
+        }
+        &::after {
+            right: initial;
+            left: 50%;
+        }
+    }
+    &__logo-shape {
+        width: 201px !important;
+        @media (max-width: 1200px) {
+            width: 150px !important;
+        }
+    }
+    &__logo-bx {
+        position: absolute;
+        width: 117px !important;
+        display: block;
+        margin: 5px auto 0 auto;
+        z-index: 3;
+        @media (max-width: 1200px) {
+            width: 85px !important;
+        }
+        img {
+            width: 100% !important;
+        }
+    }
+    
+}

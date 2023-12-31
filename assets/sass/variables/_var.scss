@@ -1,0 +1,161 @@
+:root {
+	--agrofa-font: 'Inter', sans-serif;
+	--agrofa-heading-font: 'Mali', cursive;
+	--agrofa-special-font: 'Outfit', sans-serif;
+	--agrofa-special-font3: 'Pathway Extreme', sans-serif;
+
+	--agrofa-text: #12110e;
+	--agrofa-text-rgb: #{toRGB(#12110e)};
+	--agrofa-text2: #172000;
+	--agrofa-text2-rgb: #{toRGB(#172000)};
+	--agrofa-text3: #080501;
+	--agrofa-text3-rgb: #{toRGB(#080501)};
+	--agrofa-text4: #071b0f;
+	--agrofa-text4-rgb: #{toRGB(#071b0f)};
+	--agrofa-text5: #00200c;
+	--agrofa-text5-rgb: #{toRGB(#00200c)};
+	--agrofa-text6: #0d0c0a;
+	--agrofa-text6-rgb: #{toRGB(#0d0c0a)};
+	--agrofa-text7: #2a2826;
+	--agrofa-text7-rgb: #{toRGB(#2a2826)};
+
+	--agrofa-text-dark: #9e9e9e;
+	--agrofa-text-dark-rgb: #{toRGB(#9e9e9e)};
+	--agrofa-text2-dark: #c1cfc7;
+	--agrofa-text2-dark-rgb: #{toRGB(#c1cfc7)};
+	--agrofa-text-gray: #6a6a69;
+	--agrofa-text-gray-rgb: #{toRGB(#6a6a69)};
+	--agrofa-text2-gray: #6b7870;
+	--agrofa-text2-gray-rgb: #{toRGB(#6b7870)};
+
+	--agrofa-yellow: #fdd61f;
+	--agrofa-yellow-rgb: #{toRGB(#fdd61f)};
+	--agrofa-yellow2: #f3f1e9;
+	--agrofa-yellow2-rgb: #{toRGB(#f3f1e9)};
+	--agrofa-white: #fff;
+	--agrofa-white-rgb: #{toRGB(#fff)};
+	--agrofa-white2: #fdfdfd;
+	--agrofa-white2-rgb: #{toRGB(#fdfdfd)};
+	--agrofa-white3: #e9e9e9;
+	--agrofa-white3-rgb: #{toRGB(#e9e9e9)};
+	--agrofa-black: #1e1d21;
+	--agrofa-black-rgb: #{toRGB(#1e1d21)};
+	--agrofa-green: #0c7735;
+	--agrofa-green-rgb: #{toRGB(#0c7735)};
+	--agrofa-green2: #163d25;
+	--agrofa-green2-rgb: #{toRGB(#163d25)};
+	--agrofa-green3:#008d36;
+	--agrofa-green3-rgb: #{toRGB(#008d36)};
+	--agrofa-green4:#82af93;
+	--agrofa-green4-rgb: #{toRGB(#82af93)};
+
+	// ais 
+	--agrofa-black2: #00200c;
+	--agrofa-black2-rgb: #{toRGB(#00200c)};
+	--agrofa-black3: #172000;
+	--agrofa-black3-rgb: #{toRGB(#172000)};
+
+	--agrofa-border-color: #ededed;
+	--agrofa-border-color-rgb: #{toRGB(#ededed)};
+	--agrofa-border2-color: #d7d7d7;
+	--agrofa-border2-color-rgb: #{toRGB(#d7d7d7)};
+
+	--agrofa-sky-bg-color: #e6f5ec;
+	--agrofa-sky-bg-color-rgb: #{toRGB(#e6f5ec)};
+	--agrofa-sky-bg2-color: #ecf6f0;
+	--agrofa-sky-bg2-color-rgb: #{toRGB(#ecf6f0)};
+	--agrofa-light-pink-bg-color: #ece4de;
+	--agrofa-light-pink-bg-color-rgb: #{toRGB(#ece4de)};
+
+
+	//not need
+	--agrofa-gray: #ddd;
+	--agrofa-gray-rgb: #{toRGB(#ddd)};
+
+	--agrofa-letter-space: 0.1em;
+	--agrofa-letter-space-xl: 0.2em;
+}
+
+
+$agrofa-font:var(--agrofa-font, 'Inter', sans-serif);
+$agrofa-heading-font:var(--agrofa-heading-font, 'Mali', cursive);
+$agrofa-special-font:var(--agrofa-special-font, 'Outfit', sans-serif);
+$agrofa-special-font2:var(--agrofa-special-font2, 'Kumbh Sans', sans-serif);
+$agrofa-special-font3:var(--agrofa-special-font3, 'Pathway Extreme', sans-serif);
+
+$agrofa-text:var(--agrofa-text, #12110e);
+$agrofa-text-rgb:var(--agrofa-text-rgb, #{toRGB(#12110e)});
+$agrofa-text2:var(--agrofa-text2, #172000);
+$agrofa-text2-rgb:var(--agrofa-text2-rgb, #{toRGB(#172000)});
+$agrofa-text3:var(--agrofa-text3, #080501);
+$agrofa-text3-rgb:var(--agrofa-text3-rgb, #{toRGB(#080501)});
+$agrofa-text4:var(--agrofa-text4, #071b0f);
+$agrofa-text4-rgb:var(--agrofa-text4-rgb, #{toRGB(#071b0f)});
+$agrofa-text5:var(--agrofa-text5, #00200c);
+$agrofa-text5-rgb:var(--agrofa-text5-rgb, #{toRGB(#00200c)});
+$agrofa-text6:var(--agrofa-text6, #0d0c0a);
+$agrofa-text6-rgb:var(--agrofa-text6-rgb, #{toRGB(#0d0c0a)});
+$agrofa-text7:var(--agrofa-text7, #2a2826);
+$agrofa-text7-rgb:var(--agrofa-text7-rgb, #{toRGB(#2a2826)});
+
+$agrofa-text-dark:var(--agrofa-text-dark, #9e9e9e);
+$agrofa-text-dark-rgb:var(--agrofa-text-dark-rgb, #{toRGB(#9e9e9e)});
+$agrofa-text2-dark:var(--agrofa-text2-dark, #c1cfc7);
+$agrofa-text2-dark-rgb:var(--agrofa-text2-dark-rgb, #{toRGB(#c1cfc7)});
+
+$agrofa-text-gray:var(--agrofa-text-gray, #6a6a69);
+$agrofa-text-gray-rgb:var(--agrofa-text-gray-rgb, #{toRGB(#6a6a69)});
+$agrofa-text2-gray:var(--agrofa-text2-gray, #6b7870);
+$agrofa-text2-gray-rgb:var(--agrofa-text2-gray-rgb, #{toRGB(#6b7870)});
+
+$agrofa-yellow:var(--agrofa-yellow, #{toRGB(#fdd61f)});
+$agrofa-yellow-rgb:var(--agrofa-yellow-rgb, #{toRGB(#fdd61f)});
+$agrofa-yellow2:var(--agrofa-yellow2, #{toRGB(#f3f1e9)});
+$agrofa-yellow2-rgb:var(--agrofa-yellow2-rgb, #{toRGB(#f3f1e9)});
+
+$agrofa-white:var(--agrofa-white, #fff);
+$agrofa-white-rgb:var(--agrofa-white-rgb, #{toRGB(#fff)});
+$agrofa-white2:var(--agrofa-white2, #fdfdfd);
+$agrofa-white2-rgb:var(--agrofa-white2-rgb, #{toRGB(#fdfdfd)});
+$agrofa-white3:var(--agrofa-white3, #e9e9e9);
+$agrofa-white3-rgb:var(--agrofa-white3-rgb, #{toRGB(#e9e9e9)});
+
+$agrofa-green:var(--agrofa-green, #0c7735);
+$agrofa-green-rgb:var(--agrofa-green-rgb, #{toRGB(#0c7735)});
+$agrofa-green2:var(--agrofa-green2, #163d25);
+$agrofa-green2-rgb:var(--agrofa-green2-rgb, #{toRGB(#163d25)});
+$agrofa-green3:var(--agrofa-green3, #008d36);
+$agrofa-green3-rgb:var(--agrofa-green3-rgb, #{toRGB(#008d36)});
+$agrofa-green4:var(--agrofa-green4, #82af93);
+$agrofa-green4-rgb:var(--agrofa-green4-rgb, #{toRGB(#82af93)});
+
+$agrofa-black:var(--agrofa-black, #1e1d21);
+$agrofa-black-rgb:var(--agrofa-black-rgb, #{toRGB(#1e1d21)});
+$agrofa-black2:var(--agrofa-black2, #00200c);
+$agrofa-black2-rgb:var(--agrofa-black2-rgb, #{toRGB(#00200c)});
+$agrofa-black3:var(--agrofa-black3, #172000);
+$agrofa-black3-rgb:var(--agrofa-black3-rgb, #{toRGB(#172000)});
+
+$agrofa-border-color:var(--agrofa-border-color, #ededed);
+$agrofa-border-color-rgb:var(--agrofa-border-color-rgb, #{toRGB(#ededed)});
+
+$agrofa-border2-color:var(--agrofa-border2-color, #d7d7d7);
+$agrofa-border2-color-rgb:var(--agrofa-border2-color-rgb, #{toRGB(#d7d7d7)});
+
+$agrofa-sky-bg-color: var(--agrofa-sky-bg-color);
+$agrofa-sky-bg-color-rgb: var(--agrofa-sky-bg-color-rgb, #{toRGB(#e6f5ec)});
+
+$agrofa-sky-bg2-color: var(--agrofa-sky-bg2-color);
+$agrofa-sky-bg2-color-rgb: var(--agrofa-sky-bg2-color-rgb, #{toRGB(#ecf6f0)});
+
+$agrofa-light-pink-bg-color: var(--agrofa-light-pink-bg-color);
+$agrofa-light-pink-bg-color-rgb: var(--agrofa-light-pink-bg-color-rgb, #{toRGB(#ece4de)});
+
+
+// not need
+$agrofa-base:var(--agrofa-base, #c2a74e);
+$agrofa-base-rgb:var(--agrofa-base-rgb, #{toRGB(#c2a74e)});
+$agrofa-gray:var(--agrofa-gray, #ddd);
+$agrofa-gray-rgb:var(--agrofa-gray-rgb, #{toRGB(#ddd)});
+$agrofa-letter-space:var(--agrofa-letter-space, 0.1em);
+$agrofa-letter-space-xl:var(--agrofa-letter-space-xl, 0.2em);

@@ -1,0 +1,320 @@
+.topbar-one {
+	display: none;
+	background-color: $agrofa-white;
+	@include devices(md) {
+		display: block;
+	}
+	.container-fluid {
+		max-width: 1811px;
+	}
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-bottom: 1px solid $agrofa-border-color;
+
+		@include devices(lg) {
+			flex-direction: row;
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding-left: 37px;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.2em;
+			border-left: 1px solid $agrofa-border-color;
+			padding: 15px 45px;
+			&:first-child {
+				border-left: 0;
+				padding-left: 0;
+			}
+
+			a {
+				color: inherit;
+				font-weight: 500;
+				@include borderHover;
+			}
+		}
+		&__item+&__item {
+			margin-left: 20px;
+		}
+
+		&__icon {
+			font-size: 22px;
+			color: $agrofa-green;
+			position: relative;
+			top: 0;
+			margin-right: 12px;
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		background-color: $agrofa-yellow;
+		padding: 10.5px 23px 10.5px 31px;
+
+		@include devices(lg) {
+			margin-top: 0;
+			margin-left: auto;
+		}
+	}
+
+	&__right-text {
+		font: normal 500 17px/1 $agrofa-font;
+		color: $agrofa-text;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	&__btn {
+		margin-left: 27px;
+		&::before {
+			width: 127%;
+    		height: 166%;
+		}
+		&::after {
+			width: 127%;
+    		height: 166%;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 14px;
+		line-height: 1.2em;
+	}
+	&__social {
+		display: flex;
+		align-items: center;
+		line-height: 1em;
+
+		a {
+			font-size: 15px;
+			color: $agrofa-black;
+			transition: all 500ms ease;
+			padding: 18.5px 0;
+			width: 47px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-right: 1px solid $agrofa-border-color;
+
+			&:hover {
+				background-color: $agrofa-yellow;
+				border-color: $agrofa-yellow;
+			}
+			&:first-child { border-left: 1px solid $agrofa-border-color;}
+		}
+
+	}
+
+	// topbar--two css 
+	&--two {
+		.topbar-one__inner {
+			border: 0;
+			padding-top: 26px;
+			padding-bottom: 29px;
+		}
+		.topbar-one__social {
+			border: 1px solid #bbbab9;
+			border-radius: 4px;
+			gap: 0 35px;
+			padding: 0 22px 0 27px;
+			@media (max-width: 1600px) {
+				gap: 0 22px;
+				padding: 0 17px;
+			}
+			a {
+				padding: 18px 0;
+				border: 0;
+				width: inherit;
+				transition: all 0.6s ease-in-out;
+				@media (max-width: 1600px) { padding: 16px 0;}
+				&:hover	{
+					background-color: transparent;
+					color: $agrofa-green;
+					transform: rotate(-360deg);
+				}
+			}
+		}
+
+		.topbar-one__info {
+			padding-left: 50px;
+			@media (max-width: 1760px) { padding-left: 30px;}
+			@media (max-width: 1600px) { padding-left: 25px;}
+			@media (max-width: 1200px) { padding-left: 0; }
+		}
+		.topbar-one__info__item {
+			padding: 0 74px;
+			margin: 0;
+			@media (max-width: 1760px) { padding: 0 46px;}
+			@media (max-width: 1600px) { padding: 0 38px; }
+			@media (max-width: 1200px) { padding: 0 35px; }
+			@media (max-width: 991px) { padding: 0 30px; }
+			&:first-child { padding-left: 0;}
+			&:last-child { padding-right: 0; }
+			&:hover {
+				.topbar-one__info__icon {
+					background-color: $agrofa-green3;
+					transform: scale(0.96);
+				}
+			}
+		}
+		.topbar-one__info__icon {
+			width: 50px;
+			height: 54px;
+			border-radius: 4px;
+			background-color: $agrofa-text;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $agrofa-white;
+			margin-right: 20px;
+			transition: all 0.4s;
+			&:hover {
+				background-color: $agrofa-green3;
+				transform: scale(0.96);
+			}
+			@media (max-width: 1600px) {
+				width: 45px;
+				height: 50px;
+				margin-right: 15px;
+			}
+			@media (max-width: 991px) {
+				width: 40px;
+				height: 40px;
+				margin-right: 12px;
+			}
+		}
+		.topbar-one__support {
+			&--text {
+				font-size: 16px;
+				line-height: 24px;
+				color: rgba($agrofa-text2-rgb, 0.6);
+				display: block;
+				@media (max-width: 1600px) {
+					font-size: 15px;
+					line-height: 22px;
+				}
+				@media (max-width: 991px) {
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+			a {
+				font-size: 18px;
+				line-height: 1.425em;
+				display: initial;
+				@media (max-width: 1600px) {
+					font-size: 16px;
+					line-height: 1.315em;
+				}
+				@media (max-width: 991px) {
+					font-size: 15px;
+					line-height: 1.115em;
+				}
+			}
+		}
+
+		.topbar-one__right {
+			background-color: $agrofa-yellow2;
+			border-radius: 4px;
+			padding: 13px 19px 10px 29px;
+			@media (max-width: 1760px) {
+				padding: 12px 18px 12px 20px;
+			}
+		}
+		.topbar-one__btn {
+			margin-left: 49px;
+			min-width: 101px;
+			@media (max-width: 1760px) {
+				margin-left: 30px;
+			}
+			@media (max-width: 1430px) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&--three {}
+}
+
+@media (max-width: 1780px) {
+	.topbar-one {
+		&__info {
+			padding-left: 30px;
+			&__item { padding: 16px 37px; }
+			&__item+&__item { margin-left: 0; }
+	
+			&__icon {
+				margin-right: 10px;
+			}
+		}
+	
+		&__right { padding: 10px 23px 10px 23px; }
+
+		&__btn { margin-left: 11px;	}
+	
+		&__social {	
+			a {width: 46px;	}
+		}
+	}
+}
+
+@media (max-width: 1620px) {
+	.topbar-one {
+		&__info {
+			padding-left: 20px;
+			&__item { padding: 16px 20px; }
+	
+			&__icon {
+				margin-right: 8px;
+				font-size: 16px;
+			}
+		}
+		&__right { padding: 10.5px 18px 10.5px 18px; }
+		&__social {	
+			a {width: 36px;	}
+		}
+	}
+}
+
+@media (max-width: 1430px) {
+	.topbar-one {
+		&__right-text { display: none; }
+		&__btn { margin-left: 0; }
+	}
+}
+@media (max-width: 1200px) {
+	.topbar-one {
+		&__info {
+			padding-left: 0;
+			&__item { padding: 16px 15px; }
+		}
+		&__right { padding: 10px 12px 10px 12px; }
+		&__social {	display: none; }
+		&__right-text { display: none; }
+		&__btn { margin-left: 0; }
+	}
+}
+@media (max-width: 991px) {
+	.topbar-one {
+		&__info {
+			&__item {
+				font-size: 14px;
+				padding: 16px 12px;
+			}
+		}
+		&__right {
+			display: none;
+		}
+	}
+}

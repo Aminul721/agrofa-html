@@ -1,0 +1,399 @@
+.funfact-one {
+	background-color: $agrofa-base;
+	background-image: url(../images/shapes/funfact-bg-1-1.jpg);
+	background-size: cover;
+	background-position: center center;
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@include devices(xl) {
+		padding-top: 73.5px;
+		padding-bottom: 73.5px;
+	}
+
+	&__list {
+		margin: 0;
+
+		@include devices(md) {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 20px;
+		}
+
+		@include devices(xl) {
+			justify-content: space-between;
+			gap: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-top: -6px;
+		position: relative;
+
+		&:not(:first-of-type)::before {
+			content: '';
+			width: 1px;
+			height: 67px;
+			background-color: $agrofa-white;
+			position: absolute;
+			top: 50%;
+			left: -57px;
+			transform: translateY(-50%);
+			opacity: 0.3;
+			display: none;
+
+			@include devices(xl) {
+				display: block;
+			}
+		}
+
+		@include devices(md) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		@include devices(xl) {
+			flex: 0 0 auto;
+			max-width: none;
+		}
+
+		&:hover .funfact-one__icon {
+			transform: rotateY(360deg);
+		}
+	}
+
+	&__item+&__item {
+		margin-top: 20px;
+
+		@include devices(md) {
+			margin-top: 0;
+		}
+	}
+
+	&__icon {
+		font-size: 60px;
+		color: $agrofa-white;
+		margin-right: 20px;
+		flex-shrink: 0;
+		-webkit-transition: all 0.6s ease;
+		-o-transition: all 0.6s ease;
+		transition: all 0.6s ease;
+	}
+
+	&__count {
+		margin: 0;
+		color: $agrofa-white;
+		font-family: $agrofa-font;
+		font-size: 35px;
+		font-weight: 500;
+		line-height: 1;
+
+		@include devices(md) {
+			font-size: 40px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		color: $agrofa-white;
+		font-size: 16px;
+		line-height: 36px;
+		margin-top: 7px;
+		margin-bottom: -6px;
+	}
+}
+
+.funfact-two {
+	position: relative;
+	background-color: $agrofa-base;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 120px 0;
+
+	&__shape {
+		position: absolute;
+		left: -10px;
+		top: 0;
+
+		img {
+			animation: shapeMove 3s linear 0s infinite;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding: 80px 0;
+	}
+
+	.sec-title {
+		padding-bottom: 33px;
+	}
+
+	.sec-title__tagline,
+	.sec-title__title {
+		color: $agrofa-white;
+	}
+
+	&__list {
+		position: relative;
+		background-color: $agrofa-white;
+		margin: 0 0 0 -7px;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 0;
+
+		@media (max-width: 991px) {
+			margin: 50px 0 0;
+		}
+
+		&__icon {
+			width: 94px;
+			height: 94px;
+			background-color: $agrofa-base;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+
+			img {
+				height: 65px;
+				transform: scale(1);
+				transition: 500ms ease;
+			}
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		&:hover .funfact-two__list__icon img {
+			transform: scale(0.9);
+		}
+	}
+
+	&__item {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 42px 58px;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			border-right: 1px solid $agrofa-base;
+		}
+
+		&:nth-child(1),
+		&:nth-child(2) {
+			border-bottom: 1px solid $agrofa-base;
+		}
+
+		@media (max-width: 1199px) {
+			padding-left: 30px;
+			padding-right: 25px;
+		}
+
+		@media (max-width: 991px) {
+			padding-left: 50px;
+		}
+
+		@media (max-width: 767px) {
+			padding-left: 50px;
+			flex: 0 0 100%;
+			max-width: 100%;
+			border-bottom: 1px solid $agrofa-base;
+		}
+	}
+
+	&__count {
+		margin: 0;
+		color: $agrofa-black;
+		font-size: 40px;
+		font-family: $agrofa-font;
+		font-weight: 500;
+		line-height: 1;
+		margin-bottom: 0px;
+
+		@include devices(md) {
+			font-size: 50px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 18px;
+		margin: 0;
+	}
+}
+
+.funfact-three {
+	position: relative;
+	padding: 100px 0;
+
+	@media (max-width: 767px) {
+		padding: 80px 0 50px;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: $agrofa-gray;
+
+		@media (min-width: 1400px) {
+			width: calc(100% - 240px);
+			left: 120px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 0;
+
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	&__item {
+		flex: 0 0 25%;
+		max-width: 25%;
+		position: relative;
+
+		@media (max-width: 991px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding: 0 0 30px !important;
+		}
+
+		@media (max-width: 767px) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 0 0 30px !important;
+			text-align: center;
+		}
+
+		&:not(:last-of-type)::before {
+			content: "";
+			width: 1px;
+			height: 100%;
+			background-color: $agrofa-border-color;
+			position: absolute;
+			top: 0;
+			right: 54px;
+
+			@media (max-width: 991px) {
+				right: 50px !important;
+			}
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		&:not(:first-of-type) {
+			padding-left: 37px;
+
+			@media (max-width: 1199px) {
+				padding-left: 0;
+			}
+		}
+
+		&:nth-child(2)::before {
+			right: 16px;
+
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+
+		&:nth-child(3)::before {
+			right: -20px;
+		}
+
+		&:nth-child(3) {
+			padding-left: 63px;
+
+			@media (max-width: 1199px) {
+				padding-left: 40px;
+			}
+		}
+
+		&:last-child {
+			padding-left: 104px;
+
+			@media (max-width: 1199px) {
+				padding-left: 70px;
+			}
+		}
+
+		&:hover .funfact-three__icon::before {
+			transform: scale(0.9);
+		}
+	}
+
+	&__icon {
+		width: 103px;
+		height: 104px;
+		background-color: $agrofa-base;
+		font-size: 60px;
+		color: $agrofa-white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 13px;
+
+		@media (max-width: 767px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&::before {
+			transition: all 500ms linear;
+			transition-delay: 0s;
+			transition-delay: 0s;
+			transition-delay: 0s;
+			transition-delay: 0s;
+			transition-delay: 0.1s;
+			transform: scale(1);
+		}
+	}
+
+	&__count {
+		margin: 0;
+		color: $agrofa-black;
+		font-family: $agrofa-font;
+		font-size: 35px;
+		font-weight: 500;
+		line-height: 1;
+
+		@include devices(md) {
+			font-size: 40px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		color: $agrofa-text;
+		font-size: 16px;
+		margin-top: 9px;
+		margin-bottom: -6px;
+	}
+}

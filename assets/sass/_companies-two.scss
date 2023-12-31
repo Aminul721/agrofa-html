@@ -1,0 +1,90 @@
+.companies-two {
+    .container {
+        padding-top: 105px;
+        padding-bottom: 120px;
+        @media (max-width: 991px) {
+            padding-top: 48px;
+            padding-bottom: 62px;
+        }
+    }
+    .section-common-title {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 60px;
+        line-height: 64px;
+        text-align: center;
+        margin-bottom: 52px;
+        @media (max-width: 767px) {
+            font-size: 38px;
+            line-height: 42px;
+            margin-bottom: 36px;
+        }
+    }
+    &__carousel {
+        border-bottom: 1px solid #e4e4e4;
+        padding-bottom: 35px;
+        .owl-stage-outer {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: $agrofa-white;
+                z-index: 1;
+            }
+        }
+    }
+    &__inner-img {
+        min-height: 108px;
+        max-height: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: auto;
+            height: 84px;
+            left: 0;
+            top: 20px;
+            bottom: 0;
+            margin: auto 0;
+            z-index: 1;
+            border-left: 1px solid #e4e4e4;
+        }
+        & > img {
+            width: auto !important;
+        }
+    }
+
+    &--farmar_companies {
+        .container {
+            padding-top: 0;
+            padding-bottom: 118px;
+            @media (max-width: 991px) {
+                padding-bottom: 70px;
+            }
+        }
+        .companies-two__carousel {
+            padding-bottom: 29px;
+        }
+    }
+
+    &--about {
+        .container {
+            padding-top: 105px;
+            padding-bottom: 126px;
+            @media (max-width: 991px) {
+                padding-top: 52px;
+                padding-bottom: 58px;
+            }
+        }
+    }
+}

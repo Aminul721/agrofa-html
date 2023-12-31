@@ -1,0 +1,542 @@
+.latest-work-one {
+    .container-fluid { padding: 0; }
+    .section-common-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+    &__chose-reasone {
+        flex-direction: column;
+        padding-bottom: 14px;
+    }
+    &__title {
+        font-size: 60px;
+        line-height: 65px;
+        text-align: center;
+        margin-bottom: 65px;
+        @media (max-width: 1250px) {
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bx {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding-bottom: 66px;
+        @media (max-width: 1250px) {
+            gap: 30px 0;
+        }
+        @media (max-width: 991px) { padding-bottom: 42px; }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-height: 330px;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background-color: #fcfaf0;
+        }
+    }
+    &__carousel {
+        z-index: 2;
+    }
+    &__col {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__img {
+        position: relative;
+    }
+    &__inner-img {
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            width:100%;
+            max-width: 0;
+            height: 100%;
+            max-height: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background-color: rgba($agrofa-text-rgb, 0.4);
+            transition: all 0.5s ease;
+        }
+        img {
+            width: 100% !important;
+            max-height: 444px;
+            min-height: 444px;
+            object-fit: cover;
+            transition: all 0.6s ease;
+        }
+        &:hover {
+            &::after {
+                max-width:100%;
+                max-height:100%;
+            }
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__btm-info {
+        position: absolute;
+        width: calc(calc(100% - 7px));
+        height: auto;
+        left: -17px;
+        bottom: 11px;
+        z-index: 2;
+        background-color: $agrofa-text5;
+        padding: 20.5px 37px 20.5px 21px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 991px) {
+            width: calc(100% - 0px);
+            padding: 22px 20px 22px 21px;
+            left: -12px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            display: inline-block;
+            z-index: 99;
+            border-right: 18px solid transparent;
+            border-top: 18px solid var(--agrofa-green, #0c7735);
+            left: 0px;
+            top: -18px;
+            transform: rotate(180deg);
+            @media (max-width: 991px) { display: none; }
+        }
+    }
+    &__work-title {
+        font-size: 22px;
+        line-height: 31px;
+        font-weight: 600;
+        color: $agrofa-white;
+        border-left: 4px solid $agrofa-yellow;
+        padding-left: 14px;
+        margin-bottom: 0;
+        @media (max-width: 991px) {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+    .latest-work--btn {
+        min-width: 115px;
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        border-radius: 3px;
+        background-color: $agrofa-yellow;
+        color: #0b3b1d;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 0 26px 0 30px;
+        &::before {
+            left: -85%;
+            background-color: $agrofa-green;
+        }
+        &::after { 
+            right: -85%;
+            background-color: $agrofa-green;
+        }
+        &:hover {
+            &::before {
+                left: -35%;
+            }
+            &::after { 
+                right: -35%;
+            }
+            span { color: $agrofa-white; }
+        }
+        .latest-work-btn--arrow {
+            font-size: 13px;
+            line-height: 1;
+            margin-left: 4px;
+            color: #0b3b1d;
+            position: relative;
+            z-index: 2;
+        }
+        &:hover .latest-work-btn--arrow { color: $agrofa-white; }
+    }
+
+    &__more-work {
+        background-color: #fcfaf0;
+        padding: 0 15px 118px 15px;
+        @media (max-width: 991px) {
+            padding-bottom: 52px;
+        }
+    }
+    &__more-inner-bg {
+        max-width: 1170px;
+        background-color: $agrofa-yellow;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 3px;
+        padding-left: 40px;
+        @media (max-width: 991px) {
+            padding: 15px 20px;
+            flex-direction: column;
+        }
+    }
+    &__more-work-title {
+        font-family: $agrofa-font;
+        font-size: $heading-size6;
+        line-height: 29px;
+        font-weight: 600;
+        color: $agrofa-text;
+        margin-bottom: 0;
+        @media (max-width: 991px) {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+    .more-work--btn {
+        min-width: 203px;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 500;
+        color: $agrofa-white;
+        text-transform: uppercase;
+        border-radius: 3px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        padding: 0 31px;
+        &::before {
+            left: -80%;
+        }
+        &::after {
+            right: -80%;
+        }
+        &:hover {
+            &::before {
+                left: -36%;
+            }
+            &::after {
+                right: -36%;
+            }
+        }
+    }
+
+    &--two {
+        background-color: $agrofa-white;
+        position: relative;
+        padding: 0 15px 0 36px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 170px;
+            height: 386px;
+            right: -8px;
+            top: -23px;
+            background-image: url('../images/shapes/latest-work-effect2-1.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 100% 100%;
+            -webkit-animation: latestEffect1 1.8s infinite  alternate;
+            animation: latestEffect1 1.8s infinite  alternate;
+            @-webkit-keyframes latestEffect1 {
+                0% { transform: translate(0, 0); }
+                100% { transform: translate(10px, -15px); }
+            }
+            @keyframes skillEffect1 {
+                0% { transform: translate(0, 0); }
+                100% { transform: translate(10px, -15px); }
+            }
+
+            @media (max-width: 1440px) {
+                width: 105px;
+                height: 235px;
+                right: -2px;
+                top: -15px;
+            }
+            @media (max-width: 767px) {
+                width: 74px;
+                height: 150px;
+                right: 0;
+                top: -5px;
+            }
+        }
+        .container-fluid {
+            max-width: 1442px;
+            margin: 0 auto;
+            padding-bottom: 118px;
+            @media (max-width: 991px) {
+                padding-bottom: 66px;
+            }
+        }
+
+        .latest-work-one__bx {padding-bottom: 0; }
+        .latest-work-one__bx::after {content: none;}
+        .latest-work-one__btm-info{
+            padding-left: 38px;
+            padding-right: 25px;
+        }
+    }
+
+    &--three {
+        .container-fluid {
+            padding-top:98px;
+        }
+        .latest-work-one__more-work{
+            position: relative;
+            z-index: 2;
+            padding-bottom: 120px;
+            @media (max-width: 991px) {
+                padding-bottom: 52px;
+            }
+        }
+    }
+
+    &--projects {
+        background-color: $agrofa-white;
+        .container {
+            max-width: 1470px;
+            padding-top: 118px;
+            padding-bottom: 120px;
+            @media (max-width: 991px) {
+                padding-top: 58px;
+                padding-bottom: 65px;
+            }
+        }
+        .latest-work-one__bx {
+            gap: 30px 0;
+            padding-bottom: 0;
+            &::after { content: none;}
+        }
+        .latest-work-one__btm-info {
+            padding-left: 38px;
+            padding-right: 25px;
+        }
+    }
+
+    &--projects-two {
+        background-color: $agrofa-white;
+        overflow: hidden;
+        .container {
+            padding-top: 118px;
+            padding-bottom: 120px;
+            @media (max-width: 1200px) {
+                max-width: 100%
+            }
+            @media (max-width: 991px) {
+                max-width: 100%;
+                padding-top: 58px;
+                padding-bottom: 65px;
+            }
+        }
+        .latest-work-one__bx {
+            gap: 30px 0;
+            padding-bottom: 0;
+            &::after { content: none;}
+        }
+        .latest-work-one__col {
+            transition: all 0.4;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                background-image: url('../images/backgrounds/project-bg-normal1-1.png');
+                background-repeat: repeat-x;
+                background-position: left bottom;
+                transition: all 0.4s;
+            }
+            &:hover {
+                &::after {
+                    content: '';
+                    background-image: url('../images/backgrounds/project-bg-hover1-1.png');
+                    background-repeat: repeat-x;
+                    background-position: left bottom;
+                }
+            }
+        }
+        .latest-work-one__btm-info {
+            background-color: transparent;
+            width: 100%;
+            left: 0;
+            padding-left: 34px;
+            padding-right: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            &::after {
+                content: none;
+            }
+        }
+        .latest-work-one__tagwrap {
+            position: relative;
+            padding-left: 13px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 45px;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                background-color: $agrofa-yellow;
+            }
+        }
+        .latest-work-one__tagname {
+            font-size: 14px;
+            line-height: 19px;
+            font-weight: 500;
+            color: $agrofa-white;
+            position: relative;
+            display: block;
+            width: fit-content;
+            margin-bottom: 4px;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                border-bottom: 1px solid $agrofa-white;
+            }
+        }
+        .latest-work-one__work-title {
+            border: 0;
+            padding-left: 0;
+            & > a {
+                color: $agrofa-white;
+            }
+        }
+        .latest-work--btn {
+            position: absolute;
+            width: 46px;
+            min-width: initial;
+            height: 46px;
+            right: 16px;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            margin: auto 0;
+            background-color: $agrofa-green;
+            border-radius: 50%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::after { content: none;}
+            &::before {
+                width: 100%;
+                max-width: 0;
+                height: 100%;
+                max-height: 0;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                border-radius: 50%;
+                transform: initial;
+                background-color: $agrofa-yellow;
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                    max-width: 100%;
+                    max-height: 100%;
+                    left: 0;
+                }
+                .latest-work-btn--arrow {
+                    color: $agrofa-text;
+                }
+            }
+            .latest-work-btn--arrow {
+                color: $agrofa-white;
+                margin: 0;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .projects-btn-wrap {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .projects--btn {
+            font-size: 15px;
+            line-height: 1;
+            font-weight: 500;
+            color: $agrofa-text4;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 55px;
+            background-color: $agrofa-yellow;
+            border-radius: 3px;
+            padding: 0 48px;
+            margin-left: 0;
+            &::before,
+            &::after {
+                background-color: $agrofa-green;
+            }
+            &:hover {
+                color: $agrofa-white;
+            }
+        }
+    }
+
+    &--projects-details {
+        .container {
+            max-width: 1600px;
+            padding-top: 82px;
+            padding-bottom: 124px;
+            @media (max-width: 991px) {
+                padding-top: 56px;
+                padding-bottom: 72px;
+            }
+        }
+        .projects-details-title {
+            font-family: $agrofa-font;
+            font-weight: 600;
+            font-size: 38px;
+            line-height: 44px;
+            margin-bottom: 56px;
+            @media (max-width: 991px) {
+                margin-bottom: 38px;
+            }
+            @media (max-width: 767px) {
+                font-size: 28px;
+                line-height: 32px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

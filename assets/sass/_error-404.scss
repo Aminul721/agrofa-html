@@ -1,0 +1,118 @@
+.error-404 {
+	background-color: #eff7f2;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	text-align: center;
+	background-image: url('../images/backgrounds/bg-404-1-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-blend-mode: overlay;
+	@media (max-width: 991px) {
+		padding-top: 96x;
+		padding-bottom: 106px;
+	}
+	.container {
+		max-width: 660px;
+	}
+
+	&__title {
+		font-size: 180px;
+		line-height: 1;
+		font-weight: 700;
+		color: $agrofa-text;
+		margin-bottom: 12px;
+		@media (max-width: 991px) {
+			font-size: 154px;
+		}
+		& > span {
+			color: $agrofa-yellow;
+			text-shadow: -8px -16px 1px $agrofa-green;
+		}
+	}
+	&__sub-title {
+		color: $agrofa-green;
+		font-family: $agrofa-font;
+		font-weight: 500;
+		font-size: 38px;
+		line-height: 1;
+		margin-bottom: 45px;
+	}
+	&__text {
+		color: $agrofa-text;
+		font-size: 18px;
+		line-height: 32px;
+		font-weight: 400;
+		margin-bottom: 48px;
+	}
+	&__search {
+		position: relative;
+		margin-bottom: 56px;
+	}
+	#error-search {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		outline-style: none;
+		border: 1px solid #eae9e9;
+		font-size: $body-size;
+		line-height: 1;
+		font-weight: 300;
+		background: $agrofa-white;
+		color: $agrofa-text;
+		width: 100%;
+		padding: 0 62px 0 28px;
+		border-radius: 30px;
+	}
+	#error-search::-webkit-input-placeholder {
+		color: $agrofa-text;
+		font-weight: 300;
+	}
+	#error-search:-moz-placeholder {
+		color: $agrofa-text;
+		font-weight: 300;
+	}
+	&__search__btn {
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		background: none;
+		border: 0;
+		outline-style: none;
+		width: 50px;
+		height: calc(calc(100% - 2px));
+		display: flex;
+		align-items: center;
+		padding: 0;
+		background-color: $agrofa-white;
+		border-radius:  0 32px 32px 0;
+	}
+	&__btns {
+		display: flex;
+		justify-content: center;
+	}
+	&__btn {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		font-size: 15px;
+		line-height: 1;
+		font-weight: 500;
+		color: $agrofa-text;
+		text-transform: uppercase;
+		border: 1px solid $agrofa-text;
+		border-radius: 4px;
+		background-color: $agrofa-yellow;
+		padding: 5px 53px;
+		margin-left: 0;
+		&::before,
+		&::after { content: none;}
+		&:hover {
+			background-color: $agrofa-green;
+			border-color: $agrofa-green;
+			color: $agrofa-white;
+		}
+	}
+}

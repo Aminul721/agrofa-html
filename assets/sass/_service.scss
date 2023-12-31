@@ -1,0 +1,403 @@
+.service-one {
+    position: relative;
+    background-color: $agrofa-white;
+    padding: 120px 0;
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: calc(100% + 160px);
+        margin-top: -160px;
+        z-index: 2;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $agrofa-gray;
+
+        @media (min-width: 1400px) {
+            width: calc(100% - 240px);
+            left: 120px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 80px 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 3;
+        margin-top: -160px;
+    }
+
+    &--page {
+        .container {
+            margin-top: 0;
+        }
+
+        .service-one__bg {
+            height: 100%;
+            margin-top: 0;
+        }
+    }
+
+    .sec-title {
+        text-align: center;
+    }
+
+    .col-lg-3 {
+        width: 20%;
+
+        @media (max-width: 1199px) {
+            width: 33.33%;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        position: relative;
+        background-color: $agrofa-white;
+        box-shadow: 0px 10px 60px 0px rgba($agrofa-black3-rgb, 0.07);
+        margin-bottom: 30px;
+        z-index: 2;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: top left;
+        transition: all 500ms ease;
+
+        &__wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            padding: 39px 30px 36px;
+            transition: all 500ms ease;
+        }
+
+        &__hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition: 500ms ease;
+            transform: scale(1.2);
+            z-index: -1;
+
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                background-color: rgba($agrofa-black2-rgb, 0.7);
+            }
+        }
+
+        &:hover {
+
+            .service-one__item__hover {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+
+            .service-one__item__title {
+                color: $agrofa-white;
+            }
+        }
+
+        &__icon {
+            font-size: 60px;
+            line-height: 1;
+            position: relative;
+            z-index: 3;
+            color: $agrofa-base;
+            display: inline-block;
+            margin: 0 0 23px;
+            transition: 500ms ease;
+
+            span {
+                display: inline-block;
+                transition: all 500ms linear;
+                transition-delay: 0s;
+                transition-delay: 0.1s;
+                transform: scale(1);
+            }
+        }
+
+        &:hover &__icon {
+            color: $agrofa-base;
+
+            span {
+                transform: scale(0.9);
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 125px;
+            transition: all 300ms ease;
+            position: relative;
+            z-index: 3;
+            margin: 0 auto;
+
+            a {
+                color: inherit;
+                background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+
+                &:hover {
+                    color: $agrofa-base;
+                    background-size: 100% 1px;
+                }
+            }
+        }
+    }
+
+    &__info {
+        position: relative;
+        max-width: 830px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid $agrofa-border-color;
+        padding: 17px 18px 16px 28px;
+
+        @media (max-width: 767px) {
+            display: block;
+            text-align: center;
+        }
+
+        &__text {
+            margin: 0;
+        }
+
+        .agrofa-btn {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            padding: 11px 29px;
+
+            @media (max-width: 767px) {
+                margin: 15px 0 10px;
+            }
+        }
+    }
+}
+
+.service-page {
+    padding: 120px 0;
+
+    @media (max-width: 767px) {
+        padding: 80px 0;
+        padding-top: 60px;
+    }
+
+    &--home {
+        position: relative;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        padding: 120px 0;
+
+        @media (max-width: 767px) {
+            padding: 80px 0;
+        }
+
+        .sec-title {
+            text-align: center;
+        }
+    }
+
+    &--carousel {
+        .why-choose-one__col {
+            width: 100%;
+        }
+        .why-choose-one__bg {
+            -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.11);
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.11);
+        }
+        @media (max-width: 1440px) {
+        }
+    }
+}
+
+.service-card-two {
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+    background-color: $agrofa-white;
+
+    @media (max-width: 1199px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__carousel {
+        .owl-nav {
+            @include devices(lg) {
+                display: none;
+            }
+        }
+    }
+
+
+    &__image {
+        width: 210px;
+        height: 210px;
+        border: 6px solid $agrofa-white;
+        box-shadow: 0 0 0 1px $agrofa-base;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        margin-bottom: 30px;
+        background-color: $agrofa-black;
+        transition: all 500ms ease;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 0;
+            height: 0;
+            background: rgba($agrofa-white-rgb, 0.2);
+            border-radius: 50%;
+            transition: all 500ms linear;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 2;
+        }
+    }
+
+    &:hover &__image {
+        border-color: $agrofa-base;
+
+        &::after {
+            animation: zoom-hover .95s;
+        }
+    }
+
+    &__content {
+        &__shape {
+            display: block;
+            width: auto !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+
+    &__icon {
+        width: 106px;
+        height: 106px;
+        background-color: $agrofa-base;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $agrofa-white;
+        font-size: 60px;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        line-height: 1;
+        transform: translateX(calc(-50% + 30px));
+
+        i {
+            display: block;
+            transform: scale(1);
+            transition: transform 500ms ease;
+        }
+
+        &:hover i {
+            transform: scale(.9);
+        }
+    }
+
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $agrofa-black;
+        font-size: 22px;
+        line-height: 1.2em;
+        margin-top: -5px;
+        margin-bottom: 12px;
+
+        @include devices(md) {
+            font-size: 24px;
+        }
+
+        a {
+            color: inherit;
+            @include borderHover;
+
+            &:hover {
+                color: $agrofa-base;
+            }
+        }
+    }
+
+
+    &__text {
+        margin: 0;
+        font-size: 15px;
+        line-height: 30px;
+        margin-top: 10px;
+        padding-bottom: 21px;
+        margin-bottom: 5px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: $agrofa-letter-space;
+        color: $agrofa-black;
+        transition: all 500ms ease;
+        line-height: 1em;
+        position: relative;
+        text-shadow: 0 0 .5px currentColor;
+        justify-content: center;
+        background-color: $agrofa-gray;
+        padding: 11.5px 0;
+
+        &:hover {
+            background-color: $agrofa-black;
+            color: $agrofa-white;
+        }
+
+        i {
+            font-size: 16px;
+            margin-left: 9px;
+        }
+    }
+}

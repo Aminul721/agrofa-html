@@ -1,0 +1,28 @@
+.our-team-one__wrap {
+  padding: 174px 0 124px 0;
+}
+.our-team-one .section-common-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 68px;
+  padding-bottom: 56px;
+}
+.our-team-one__chose-reasone {
+  width: 100%;
+}
+.our-team-one__chose-name {
+  margin-left: 0;
+}
+.our-team-one__title {
+  width: calc((58.6% - 34px) / 1);
+  margin-bottom: 0;
+}
+.our-team-one__text {
+  width: calc((41.4% - 34px) / 1);
+  font-size: 16px;
+  line-height: 32px;
+  padding-right: 0;
+  padding-top: 7px;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=our-team-one.css.map */

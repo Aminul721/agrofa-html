@@ -1,0 +1,180 @@
+.comments-one {
+	margin-top: 38px;
+
+	@include devices(xl) {
+		margin-top: 52px;
+	}
+
+	&__title {
+		margin: 0;
+		font-family: $agrofa-font;
+		font-size: 18px;
+		color: #252422;
+		font-weight: 600;
+		@include devices(lg) {
+			font-size: 22px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		margin-top: 38px;
+	}
+
+	&__card {
+		&:not(:first-of-type) {
+			padding-top: 40px;
+		}
+
+		&__wrap {
+			width: 100%;
+			border-bottom: 1px solid #e4e4e4;
+			padding-bottom: 44px;
+			margin-bottom: 35px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+		&__image {
+			width: 103px;
+			height: 103px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 12px;
+			@include devices(md) {
+				margin-right: 18px;
+			}
+
+			@include devices(xl) {
+				margin-right: 27px;
+			}
+
+			img {
+				border-radius: 50% !important;
+				width: 100% !important;
+			}
+		}
+
+		&__title-wrap {
+			display: flex;
+			align-items: center;
+			margin-bottom: 6px;
+		}
+		&__title {
+			margin: 0;
+			font-family: $agrofa-font;
+			font-size: 18px;
+			color: #363433;
+			font-weight: bold;
+		}
+		&__text {
+			margin: 0;
+			font-size: $body-size;
+			line-height: 2em;
+			margin-bottom: 20px;
+			color: #1a1916;
+			max-width: 550px;
+			margin-bottom: 6px;
+		}
+		&__reply {
+			padding: 5px 10.5px;
+			font-size: 13px;
+			font-weight: 500;
+			border-radius: 3px;
+			background-color: #efeeee;
+			color: $agrofa-text;
+			&:hover {
+				background-color: $agrofa-green;
+				color: $agrofa-white;
+			}
+			&::after,
+			&::before {
+				content: none;
+			}
+		}
+
+		&__content {
+			position: relative;
+			@media (max-width: 767px) {
+				width: 100%;
+				padding-top: 25px;	
+			}
+		}	
+
+		&__date {
+			font-size: 14px;
+			line-height: 1;
+			font-weight: 400;
+			color: $agrofa-green;
+		}
+
+		&--wrap_inner {
+			@extend .comments-one__card__wrap;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__list--inner {
+		margin-top: 0;
+		padding-left: 77px;
+		list-style: none;
+		@media (max-width: 991px) {
+			padding-left: 25px;
+		}
+	}
+}
+
+.comments-form {
+	margin-top: 38px;
+	@include devices(xl) {
+		margin-top: 52px;
+	}
+	&__title {
+		margin: 0;
+		font-family: $agrofa-font;
+		font-weight: 600;
+		font-size: 18px;
+		color: #252422;
+		@include devices(lg) {
+			font-size: 22px;
+		}
+	}
+
+	&__form {
+		margin-top: 48px;
+	}
+	.form-one .bootstrap-select > .dropdown-toggle, 
+	.form-one input[type=text], .form-one input[type=email], 
+	.form-one textarea {
+		height: 60px;
+		border-radius: 4px;
+		padding: 2px 20px;
+		font-size: 15px;
+		font-weight: 400;
+		color: $agrofa-text3;
+		background-color: #f4f3f0;
+	}
+	.form-one textarea {
+		height: 195px;
+		resize: none;
+		padding-top: 26px;
+	}
+	.agrofa-btn--comment {
+		font-family: $agrofa-font;
+		color: $agrofa-white;
+		font-size: 15px;
+		font-weight: 500;
+		text-transform: uppercase;
+		background-color: $agrofa-green;
+		border-radius: 4px;
+		margin: 0;
+		padding: 20px 41px;
+		&::before,
+		&::after { content: none; }
+		&:hover {
+			background-color: $agrofa-yellow;
+			color: $agrofa-text;
+		}
+	}
+}

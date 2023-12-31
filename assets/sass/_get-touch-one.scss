@@ -1,0 +1,352 @@
+.get-touch-one {
+    background-color: rgba(245,243,235, 0.8);
+    background-blend-mode: overlay;
+    position: relative;
+    padding: 119px 0;
+    @media (max-width: 991px) {
+        padding: 58px 0;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-image: url('../images/backgrounds/get-tuch-bg3-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+        @media (max-width: 1200px) {
+            max-width: 100%;
+        }
+    }
+    &__row {
+        @media (max-width: 767px) {
+            gap: 35px 0;
+            flex-direction: column-reverse;
+        }
+    }
+    &__form {
+        padding-right: 33px;
+        @media (max-width: 991px) {
+            padding-right: 15px;
+        }
+    }
+    &__form-row {
+        background-color: $agrofa-white;
+        border-radius: 8px;
+        padding: 64px 52px;
+        @media (max-width: 991px) {
+            padding: 35px 24px;
+        }
+    }
+    &__form-group {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .get-touch-one__field {
+        outline-style: none;
+        border: 0;
+        border-radius: 4px;
+        background-color: #faf9f3;
+        width: 100%;
+        min-height: 60px !important;
+        height: 60px !important;
+        display: flex;
+        align-items: center;
+        padding: 0 20px 0 27px;
+        font-family: $agrofa-font;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 400;
+        color: $agrofa-text;
+        transition: all 0.4s;
+        position: relative;
+        z-index: 2;
+        &:is(:focus, :active) {
+            & + .get-touch-one__field-bd-effect::before,
+            & + .get-touch-one__field-bd-effect::after {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+    .get-touch-one__field::-webkit-input-placeholder,
+    .get-touch-one__field::-webkit-input-placeholder {
+        color: $agrofa-text;
+    }
+
+    .get-touch-one__field:-moz-placeholder,
+    .get-touch-one__field:-moz-placeholder {
+        color: $agrofa-text;
+    }
+    &__field-bd-effect{
+        position: absolute;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        top: -1px;
+        left: -1px;
+        z-index: 1;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.4s;
+            border-radius: 4px;
+        }
+        &::before {
+            max-width: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            border-top: 1px solid $agrofa-green;
+            border-bottom: 1px solid $agrofa-green;
+        }
+        &::after {
+            max-height: 0;
+            margin: auto 0;
+            bottom: 0;
+            top: 0;
+            border-left: 1px solid $agrofa-green;
+            border-right: 1px solid $agrofa-green;
+        }
+    }
+    .textarea--field {
+        resize: none;
+        height: 204px !important;
+        min-height: 204px !important;
+        padding-top: 23px;
+    }
+    .form-submit-btn-wrap { padding-top: 0px;}
+    .form-submit-btn {
+        outline-style: none;
+        border: 0;
+        background-color: $agrofa-green;
+        padding: 0;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 500;
+        font-family: $agrofa-font;
+        color: $agrofa-white;
+        height: 60px;
+        transition: all 0.4s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 10px 35px;
+        border-radius: 4px;
+        &:hover {
+            background-color: $agrofa-yellow;
+            color: $agrofa-text;
+        }
+    }
+    &__content {
+        padding-left: 33px;
+        @media (max-width: 991px) {
+            padding-left: 15px;
+        }
+    }
+    &__contact-info {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 37px 0;
+        padding-top: 42px;
+        @media (max-width: 991px) {
+            padding-top: 13px;
+            gap: 20px 0;
+        }
+    }
+    &__info__contact-item {
+        display: flex;
+        align-items: center;
+        &:hover {
+            .get-touch-one__contact__icon {
+                background-color: $agrofa-yellow;
+                color: $agrofa-text;
+            }
+        }
+    }
+    &__contact__icon {
+        border: 2px solid $agrofa-white;
+        border-radius: 4px;
+        width: 57px;
+        min-width: 57px;
+        height: 60px;
+        background-color: $agrofa-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        line-height: 1;
+        color: $agrofa-white;
+        transition: all 0.5s ease;
+    }
+    &__contact-support {
+        padding-left: 28px;
+        @media (max-width: 991px) {
+            padding-left: 16px;
+        }
+        & > a {
+            display: block;
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 500;
+            color: $agrofa-text4;
+            @include borderHover;
+        }
+    }
+    &__contact--text {
+        display: block;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 26px;
+        color: $agrofa-green2;
+    }
+    &--farmer_gettouch {
+        margin-bottom: -95px;
+        padding-bottom: 215px;
+        @media (max-width: 991px) {
+            padding-bottom: 164px;
+        }
+    }
+
+    //farmer_gettouch-details
+    &--farmer_gettouch-details {
+        background-color: $agrofa-white;
+        padding: 0 0 122px 0;
+        @media (max-width: 991px) {
+            padding: 15px 0 56px 0;
+        }
+        .get-touch-one__row {
+            @media (max-width: 767px) {
+                flex-direction: initial;
+                gap: 0;
+            }
+        }
+        &::after { content: none;}
+        .farmer_gettouch__title-text {
+            font-family: $agrofa-font;
+            font-size: $heading-size4;
+            color: $agrofa-text;
+            line-height: 1;
+            font-weight: 600;
+            margin-bottom: 56px;
+            @media (max-width: 767px) {
+                margin-bottom: 40px;
+            }
+        }
+        .get-touch-one__form {
+            background-image: url('../images/backgrounds/farmer-bg2-1.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 84px 148px 60px 148px;
+            @media (max-width: 991px) {
+                padding: 30px 40px;
+            }
+            @media (max-width:767px) {
+                padding: 30px 20px;
+            }
+        }
+        .get-touch-one__form-row {
+            background-color: transparent;
+            padding: 0;
+        }
+        .get-touch-one__form-row__col {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0 28px;
+            @media (max-width: 767px) {
+                gap: 0;
+            }
+        }
+        .get-touch-one__form-group {
+            width: calc(calc(100% - 28px) / 2);
+            margin-bottom: 30px;
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .get-touch-one__field {
+            background-color: $agrofa-white;
+            border: 1px solid #e4e4e4;
+            padding-left: 21px;
+            color: #15171a;
+            font-weight: 500;
+        }
+        .get-touch-one__field::-webkit-input-placeholder,
+        .get-touch-one__field::-webkit-input-placeholder {
+            color: #15171a;
+            font-weight: 400;
+        }
+
+        .get-touch-one__field:-moz-placeholder,
+        .get-touch-one__field:-moz-placeholder {
+            color: #15171a;
+            font-weight: 400;
+        }
+        .get-touch-one__field[type='number'] {
+            -moz-appearance:textfield;
+        }
+        .get-touch-one__field::-webkit-outer-spin-button,
+        .get-touch-one__field::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        .textarea--group,
+        .textarea--field {
+            width: 100%;
+        }
+        .textarea--field {
+            height: 181px !important;
+            min-height: 181px !important;
+        }
+        .get-touch-one__field-bd-effect {
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            top: -2px;
+            left: -2px;
+        }
+        .get-touch-one__field-bd-effect::before {
+            border-top-color: #298be7;
+            border-bottom-color: #298be7;
+            border-top-width: 2px;
+            border-bottom-width: 2px;
+        }
+        .get-touch-one__field-bd-effect::after {
+            border-left-color: #298be7;
+            border-right-color: #298be7;
+            border-left-width: 2px;
+            border-right-width: 2px;
+        }
+        .form-submit-btn-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        .form-submit-btn {
+            height: 54px;
+            color: #2e2d2a;
+            text-transform: uppercase;
+            padding-left: 29.4px;
+            padding-right: 29.4px;
+            background-color: $agrofa-yellow;
+            &:hover {
+                background-color: $agrofa-green;
+                color: $agrofa-white;
+            }
+        }
+    }
+
+    &--about {
+        padding-bottom: 228px;
+    }
+}

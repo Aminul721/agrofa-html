@@ -1,0 +1,55 @@
+body.boxed-wrapper {
+    position: relative;
+
+    .page-wrapper {
+        max-width: 1530px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $agrofa-white;
+        box-shadow: 0px 0px 100px 0px rgba($agrofa-black-rgb, 0.08);
+    }
+
+    .topbar-one__social a {
+        width: 40px;
+    }
+    .topbar-one__info {
+        padding-left: 23px;
+        @media (max-width:1200px) {
+            padding-left: 0;
+        }
+    }
+    .topbar-one__info__item {
+        padding: 16px 19px;
+        &:first-child {
+            border-left: 0;
+            padding-left: 0;
+        }
+        &.topbar-one__info__item + .topbar-one__info__item {
+            margin-left: 0;
+        }
+        @media (max-width:1200px) {
+            padding: 18px 14px;
+        }
+    }
+    .topbar-one__right {
+        padding: 12px 18px;
+    }
+
+    .main-menu { 
+        padding-left: 32px;
+        @media (max-width:1280px) {
+            padding-left: 26px;
+        }
+    }
+    .main-menu .main-menu__list > li + li {
+        margin-left: 34px;
+        @media (max-width:1280px) {
+            margin-left: 30px;
+        }
+    }
+
+    .main-header__btn {
+        margin-left: 30px;
+        padding: 18.3px 20px;
+    }
+}

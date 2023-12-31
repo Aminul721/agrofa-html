@@ -1,0 +1,191 @@
+.demo-one {
+	padding-top: 120px;
+	padding-bottom: 120px;
+
+	.row {
+		--bs-gutter-y: 30px;
+	}
+
+	&__card {
+		background-color: $agrofa-white;
+		box-shadow: 0px 10px 60px 0px rgba($agrofa-black3-rgb, 0.1);
+		text-align: center;
+		transition: 500ms ease;
+		transform: translateY(0px);
+	}
+
+	&__title {
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: $agrofa-black;
+		font-weight: 500;
+		letter-spacing: $agrofa-letter-space;
+		font-family: $agrofa-font;
+
+		a {
+			color: inherit;
+			@include borderHover;
+		}
+	}
+
+	&__image {
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			bottom: 0;
+			z-index: 1;
+			background-image: url('../images/home-showcase/showcase-bg-normal1-1.png');
+			background-repeat: repeat-x;
+			background-position: left bottom;
+			transition: all 0.4s;
+		}
+		img {
+			max-width: 100%;
+			transition: filter 500ms ease;
+			filter: blur(0px);
+		}
+		&:hover {
+			&::after {
+				background-image: url('../images/home-showcase//showcase-bg-hover1-1.png');
+			}
+		}
+	}
+
+	&__card:hover &__image {
+		img {
+			filter: blur(2px);
+		}
+	}
+
+	&__btns {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		transform: scale(1, 0);
+		transition: transform 500ms ease, opacity 600ms linear;
+		transform-origin: bottom center;
+		opacity: 0;
+	}
+
+	&__card:hover &__btns {
+		transform: scale(1, 1);
+		opacity: 1;
+		transform-origin: top center;
+	}
+
+	&__btn {
+		min-width: 135px;
+		font-size: 15px;
+		padding: 12.2px 28px;
+		font-weight: 500;
+		color: $agrofa-text;
+		margin: 0;
+		&.demo-multi-btn {
+			background-color: $agrofa-yellow;
+		}
+		&.demo-single-btn {
+			background-color: $agrofa-white;
+			color: $agrofa-text;
+		}
+
+		&::before {
+			left: -93%;
+			width: 150%;
+			height: 230%;
+			top: 139%;
+		}
+
+		&::after {
+			right: -93%;
+			width: 150%;
+			height: 230%;
+			bottom: 86%;
+		}
+
+		&:hover {
+			color: $agrofa-white;
+			&::before {
+				background-color: $agrofa-black;
+				left: -48%;
+			}
+	
+			&::after {
+				background-color: $agrofa-black;
+				right: -48%;
+			}
+		}
+
+		@include devices(md) {
+			display: inline-flex;
+		}
+	}
+
+	&__title {
+		padding-top: 20.5px;
+		padding-bottom: 20.5px;
+	}
+}
+
+.home-showcase {
+	margin-bottom: -20px;
+
+	.row {
+		--bs-gutter-x: 42px;
+		--bs-gutter-y: 20px;
+	}
+
+	&__inner {
+		padding: 30px;
+		background-color: $agrofa-white;
+		box-shadow: 0px 10px 60px 0px rgba($agrofa-black3-rgb, 0.07);
+		border-radius: 0 0 5px 5px;
+	}
+
+	.demo-one__card {
+		box-shadow: none;
+	}
+
+	.demo-one__btns {
+		flex-direction: column;
+	}
+
+	.demo-one__btn {
+		min-width: 148px;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.demo-one__content {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		bottom: 0;
+		z-index: 2;
+	}
+	.demo-one__title {
+		padding: 0;
+		font-size: 15px;
+		margin-top: 15px;
+		padding-bottom: 21px;
+		letter-spacing: 0;
+		color: $agrofa-white;
+		text-transform: unset;
+	}
+}

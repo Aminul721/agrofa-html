@@ -1,0 +1,17 @@
+@mixin agrofaBtn($bgColor: $agrofa-black, $color: #fff, $padding: 16.25px 48px) {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none !important;
+  background-color: $bgColor;
+  color: $color;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: $agrofa-font;
+  padding: $padding;
+  transition: 500ms;
+  letter-spacing: $agrofa-letter-space-xl;
+  text-transform: uppercase;
+  @include reverseHover($bgColor: $bgColor, $color: $color);
+}

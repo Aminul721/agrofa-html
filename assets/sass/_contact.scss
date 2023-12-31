@@ -1,0 +1,117 @@
+.contact-one {
+	padding-bottom: 62px;
+	@media (max-width:991px) {
+		padding-bottom: 49px;
+	}
+	.container {
+		@media (max-width: 1200px) {
+			max-width: 100%;
+		}
+	}
+	&__info {
+		width: 100%;
+	}
+	&__title {
+		font-family: $agrofa-font;
+		font-weight: 700;
+		font-size: 43px;
+		line-height: 50px;
+		color: $agrofa-text;
+		margin-bottom: 24px;
+		@media (max-width:767px) {
+			font-size: 32px;
+			line-height: 40px;
+			margin-bottom: 13px;
+			& br { display: none; }
+		}
+	}
+	&__text {
+		font-size: 18px;
+		line-height: 32px;
+		font-weight: 400;
+		color: #15171a;
+		margin-bottom: 0;
+	}
+}
+
+// contact-form-two
+.get-touch-one {
+	&.contact-form-two {
+		padding-top: 277px;
+		padding-bottom: 120px;
+		background-color: rgba(241,250,245,1);
+		background-blend-mode: overlay;
+		@media (max-width: 991px) {
+			padding-top: 230px;
+			padding-bottom: 62px;
+		}
+		&::after {
+			background-image: url('../images/backgrounds/contact-formbg1-1.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center top;
+		}
+		.container {
+			max-width: 900px;
+		}
+		.get-touch-one__form-row {
+			padding: 0;
+			background-color: transparent;
+		}
+		.get-touch-one__form-row__col {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0 28px;
+        }
+		.get-touch-one__form-group {
+			width: calc((100% - 28px) / 2);
+			margin-bottom: 30px;
+			@media (max-width: 767px) {
+				width: calc((100% - 0px) / 1);
+			}
+		}
+		.get-touch-one__field {
+			background-color: $agrofa-white;
+			border: 1px solid #e4e4e4;
+			font-size: 15px;
+			line-height: 1;
+			color: rgba($agrofa-text3-rgb);
+			padding-left: 20px;
+		}
+		.get-touch-one__field::-webkit-outer-spin-button,
+		.get-touch-one__field::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+		.get-touch-one__field[type=number] {
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+		}
+		.get-touch-one__field-bd-effect {
+			&::before {
+				border-top-color: $agrofa-text;
+				border-bottom-color: $agrofa-text;
+			}
+			&::after {
+				border-left-color: $agrofa-text;
+				border-right-color: $agrofa-text;
+			}
+		}
+		.textarea--group {
+			width: 100%;
+		}
+		.textarea--field {
+			height: 180px !important;
+			min-height: 180px !important;
+		}
+		.form-submit-btn-wrap {
+			display: flex;
+			justify-content: center;
+		}
+		.form-submit-btn {
+			text-transform: uppercase;
+			height: 55px;
+			margin-top: 3px;
+		}
+	}
+}

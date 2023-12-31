@@ -1,0 +1,559 @@
+.blog-card {
+  position: relative;
+  background-color: $agrofa-white;
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100% !important;
+      min-height: 293px;
+      max-height: 293px;
+      object-fit: cover;
+      border-radius: 27px 27px 0 0;
+    }
+
+    &__link {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($agrofa-black-rgb, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(-20%);
+      transition: opacity 500ms ease, transform 500ms ease;
+      border-radius: 27px 27px 0 0;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background-color: $agrofa-white;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 27px 27px 0 0;
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+
+  &:hover &__image>a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__content {
+    background-color: $agrofa-white;
+    position: relative;
+    transition: all 500ms ease;
+  }
+
+
+  &__articles {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 30px;
+    left: 34px;
+    z-index: 10;
+    @media (max-width: 991px) {
+      top: 20px;
+      left: 20px;
+    }
+    span {
+      font-size: 14px;
+      line-height: 1;
+      color: $agrofa-text;
+      font-weight: 500;
+      background-color: $agrofa-yellow;
+      padding: 6px 20px 7px 14px;
+      display: block;
+      border-radius: 20px;
+    }
+  }
+  &__date {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: -13px;
+    left: 30px;
+    z-index: 10;
+    @media (max-width: 991px) {
+      left: 20px;
+    }
+    
+
+    span {
+      background-color: $agrofa-green;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: $agrofa-white;
+      font-size: 14px;
+      font-family: $agrofa-font;
+      line-height: 1;
+      font-weight: 500;
+      border-radius: 20px;
+      padding: 6px 20px 7px 20px;
+    }
+  }
+
+  &__content {
+    background-color: $agrofa-white;
+    padding: 37px 30px 39px 30px;
+    position: relative;
+    z-index: 10;
+    transition: all 500ms ease;
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0px 10px 35px 0px rgba(209, 210, 212, 0.35);
+    @media (max-width: 991px) {
+      padding: 30px 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 62px;
+      right: 53px;
+      bottom: 26px;
+      z-index: 1;
+      background-image: url('../images/shapes/hero-tree-icon1-1.png');
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: 38px auto;
+      transition: all 0.3s;
+      @media (max-width: 991px) {
+        right: 20px;
+        bottom: 15px;
+      }
+    }
+  }
+  
+  &:hover &__content {
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  &__title {
+    margin: 0;
+    color: $agrofa-black;
+    font-family: $agrofa-font;
+    font-size: $heading-size6;
+    font-weight: 600;
+    line-height: 34px;
+    margin-bottom: 30px;
+    @media (max-width: 991px) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 22px;
+    }
+    a {
+      color: inherit;
+      @include borderHover;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: $agrofa-text;
+    transition: all 500ms ease;
+    line-height: 1;
+    background-color: #f5f1dd;
+    border-radius: 9px;
+    padding: 14px 23px;
+    position: relative;
+    & > span { 
+      position: relative;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      max-width: 5%;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      background-color: $agrofa-yellow;
+      border-radius: 9px;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      color: $agrofa-text;
+      &::after {
+        max-width: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    margin: 0;
+    margin-bottom: 4px;
+
+    li {
+      color: $agrofa-text2;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      i {
+        color: #58625b;
+        margin-right: 4px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: inherit;
+        transition: all 500ms ease;
+
+        &:hover {
+          color: $agrofa-black;
+          text-shadow: 0 0 1px currentColor;
+        }
+      }
+    }
+  }
+}
+
+// blog-one css 
+.blog-one {
+  padding: 119px 0 117px 0;
+  @media (max-width: 991px) { padding-bottom: 70px; }
+  @media (max-width: 767px) {
+    padding: 50px 0;
+  }
+  .container {
+    max-width: 1600px;
+  }
+  &__carousel.owl-carousel .owl-nav.disabled + .owl-dots { margin-top: 38px;}
+  .section-common-title {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 92px;
+    padding-bottom: 54px;
+    @media (max-width: 991px) {
+      padding-bottom: 39px;
+    }
+  }
+  &__chose-reasone {
+    width: 100%;
+    padding-bottom: 14px;
+  }
+  &__title {
+    width: calc((54% - 46px) / 1);
+    margin-bottom: 0;
+    @media (max-width: 991px) {
+      width: calc((100% - 0px) / 1);
+    }
+  }
+  &__text {
+    width: calc((46% - 46px) / 1);
+    padding-right: 0;
+    padding-top: 7px;
+    margin-bottom: 0;
+    @media (max-width: 991px) {
+      width: calc((100% - 0px) / 1);
+      padding-top: 11px;
+    }
+  }
+
+  &--home {
+    .sec-title {
+      text-align: center;
+    }
+  }
+
+  &__carousel {
+    .owl-nav {
+      @include devices(lg) {
+        display: none;
+      }
+    }
+  }
+
+  &--three {
+    padding-top: 119px;
+    padding-bottom: 118px;
+    @media (max-width: 767px) {
+      padding-top: 40px;
+      padding-bottom: 66px;
+    }
+    .container {
+      max-width: 1200px;
+    }
+    .section-common-title {
+      max-width: 805px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding-bottom: 54px;
+    }
+    .blog-one__chose-reasone {
+      flex-direction: column;
+      width: 100%;
+    }
+    .blog-one__title {
+      text-align: center;
+      width: 100%;
+    }
+    .blog-card__image img {
+      min-height:298px;
+      max-height:298px;
+      border-radius: 27px;
+    }
+    .blog-card__image__link {
+      border-radius: 27px;
+    }
+    .blog-card {
+      border: 1px solid #e8e7e6;
+      border-radius: 27px;
+      &:hover {
+        .blog-card__content::after {
+          transform: rotate(-45deg);
+          background-color: $agrofa-green;
+          color: $agrofa-white;
+        }
+      }
+    }
+      
+    .blog-card__content {
+      padding: 28px 24px 29px 32px;
+      &::after {
+        font-family: 'icomoon' !important;
+        content: '\e902';
+        width: 50px;
+        height: 50px;
+        right: 35px;
+        bottom: 15px;
+        border-radius: 50%;
+        background-image: none;
+        background-color: #e5f5eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: $agrofa-text;
+      }
+    }
+    .blog-card__title {
+      border-bottom: 1px solid #edebe6;
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+    .blog-card__date {
+      max-width: 56px;
+      top: -51px;
+      left: 32px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        display: inline-block;
+        z-index: 99;
+        border-right: 10px solid transparent;
+        border-top: 11px solid var(--agrofa-green, #0c7735);
+        right: -10px;
+        bottom: 0;
+    }
+      span {
+        line-height: 17px;
+        border-radius: 0;
+        padding: 14px 4px;
+      }
+  }
+
+    .blog-card__link {
+      background-color: transparent;
+      padding: 0;
+      &::after {
+        background-color: transparent;
+        border-bottom: 1px solid #000;
+        border-radius: 0 ;
+        max-width: 100%;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        bottom: -1px;
+        left: 0;
+        top: initial;
+      }
+      &:hover {
+        &::after {
+          max-width: 0;
+        }
+      }
+    }
+  }
+
+  &--page {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: 991px) {
+      padding-top: 62px;
+      padding-bottom: 72px;
+    }
+
+    &__row {
+      gap: 30px 0;
+    }
+  }
+
+  &--list {
+    padding-top: 100px;
+    padding-bottom: 88px;
+    @media (max-width: 991px) {
+      padding-top: 66px;
+      padding-bottom: 72px;
+    }
+    .container {
+      max-width: 1200px;
+    }
+    &__content {
+      @media (max-width: 991px) { padding-bottom: 42px; }
+      .blog-card {
+        overflow: hidden;
+      }
+      .blog-card__image {
+        overflow: initial;
+      }
+      .blog-card__image img {
+        min-height: 450px;
+        max-height: 450px;
+        border-radius: 0;
+      }
+      .blog-card__date {
+        top: initial;
+        bottom: -16px;
+        left: 0;
+        span {
+          width: fit-content;
+          height: 32px;
+          padding: 5px 19px;
+          border-radius: 0;
+        }
+      }
+      .blog-card__image__link{
+        border-radius: 0;
+      }
+      .blog-card-two__content {
+        padding-top: 28px;
+      }
+      .blog-card__title {
+        color: $agrofa-text2;
+        font-size: 30px;
+        line-height: 38px;
+        margin-bottom: 22px;
+      }
+      .blog-card-two__text {
+        color: #636260;
+        font-size: $body-size;
+        line-height: 32px;
+        margin-bottom: 22px;
+      }
+      .blog-card__link {
+        background-color: transparent;
+        border: 1px solid #d4d4d4;
+        text-transform: uppercase;
+        padding-left: 17px;
+        padding-right: 18px;
+        border-radius: 4px;
+        color: #2a2826;
+        & > i {
+          margin-left: 8px;
+          transition: all 0.4s;
+        }
+        &::after {
+          display: none;
+        }
+        &:hover {
+          border-color: #2a2826;
+          & > i {
+            transform: translateX(5px);
+          }
+        }
+      }
+
+    }
+  }
+
+  .pagination {
+    padding-top: 49px;
+    gap: 0 10px;
+    margin: 0;
+  }
+  .page-link {
+    border: 0;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    color: #000;
+    background-color: #f3f5f4;
+    border-radius: 4px !important;
+    padding: 15px 17.5px;
+  }
+  .page-link:hover,
+  .active .page-link {
+    background-color: $agrofa-green;
+    color: $agrofa-white;
+  }
+}
+
+
+.blog-card-link {
+  background-color: $agrofa-gray;
+  padding: 30px;
+
+  @include devices(md) {
+    padding: 60px;
+  }
+
+  .blog-card__title {
+    margin: 0;
+    margin-bottom: -10px; 
+  }
+}
+
+.blog-card-qoute__image {
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+.blog-card-link__icon {
+  font-size: 40px;
+  color: $agrofa-base;
+  line-height: 1em;
+  margin-bottom: 22px;
+}

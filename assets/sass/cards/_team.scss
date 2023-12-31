@@ -1,0 +1,1026 @@
+.team-one {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: 991px) {
+    padding-top: 62px;
+    padding-bottom: 72px;
+  }
+
+  .sec-title {
+    text-align: center;
+  }
+
+  &__carousel {
+    .owl-nav {
+      @include devices(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.team-card {
+  &__image {
+    position: relative;
+    padding-left: 30px;
+    padding-top: 30px;
+
+    img {
+      position: relative;
+      max-width: 100%;
+    }
+
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 300px;
+      height: 324px;
+      background-color: $agrofa-gray;
+      background-image: url(../images/shapes/team-card-s-1-1.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+  }
+
+
+  &__hover {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+  }
+
+  &__email {
+    background-color: $agrofa-base;
+    position: relative;
+
+    >a {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $agrofa-white;
+      transition: all 500ms ease;
+
+      &:hover {
+        background-color: $agrofa-black;
+        color: $agrofa-white;
+      }
+    }
+  }
+
+  &__social {
+    background-color: $agrofa-white;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms ease;
+
+    &:hover {
+      background-color: $agrofa-white;
+
+      >i {
+        color: $agrofa-base;
+      }
+    }
+
+    >i {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $agrofa-black;
+      transition: all 500ms ease;
+    }
+
+    &__list {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%) scale(0, 1);
+      background-color: $agrofa-black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      min-height: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      opacity: 0;
+      transition: 500ms ease;
+      transform-origin: top left;
+
+      a {
+        color: $agrofa-white;
+        font-size: 14px;
+        transition: all 500ms ease;
+
+        +a {
+          margin-left: 27px;
+        }
+
+        &:hover {
+          color: $agrofa-base;
+        }
+      }
+    }
+
+    &:hover &__list {
+      opacity: 1;
+      transform: translateY(-50%) scale(1, 1);
+    }
+  }
+
+  &__content {
+    padding-top: 20px;
+    padding-left: 30px;
+
+    @include devices(lg) {
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.1818181818181819em;
+    color: $agrofa-black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: -7px;
+
+    @include devices(md) {
+      font-size: 22px;
+      margin-bottom: -6px;
+    }
+
+    a {
+      color: inherit;
+      @include borderHover;
+
+      &:hover {
+        color: $agrofa-base;
+      }
+    }
+  }
+
+  &__designation {
+    line-height: 1em;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $agrofa-text;
+    letter-spacing: $agrofa-letter-space;
+    margin-bottom: 5px;
+    font-family: $agrofa-font;
+  }
+
+}
+
+.team-details {
+  padding-top: 120px;
+
+  @media (max-width: 767px) {
+    padding: 80px 0 0;
+    padding-top: 60px;
+  }
+
+  &__inner {
+    border-bottom: 1px solid $agrofa-border-color;
+    padding-bottom: 100px;
+  }
+  
+  &__image {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      width: 100% !important;
+    }
+  }
+
+  &__content {
+    @include devices(lg) {
+      padding-left: 70px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background-color: $agrofa-base;
+    border: 20px solid $agrofa-white;
+    width: 220px;
+    padding: 30px;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+
+    @include devices(lg) {
+      left: -96px;
+    }
+
+    i {
+      font-size: 60px;
+      color: $agrofa-white;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 18px;
+      color: $agrofa-white;
+      text-transform: uppercase;
+      max-width: 104px;
+      font-weight: bold;
+      margin-bottom: -5px;
+      margin-top: 10px;
+
+      @include devices(md) {
+        font-size: 20px;
+      }
+
+      @include devices(lg) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    margin-top: -7px;
+    margin-bottom: 6px;
+
+    @include devices(md) {
+      font-size: 35px;
+    }
+
+    @include devices(lg) {
+      font-size: 40px;
+    }
+  }
+
+  &__designation {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2em;
+  }
+
+  &__highlight {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $agrofa-base;
+    font-size: 20px;
+    font-family: $agrofa-heading-font;
+    line-height: 1.3em;
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin-bottom: 0;
+
+    li {
+      position: relative;
+      font-size: 16px;
+      line-height: 2.25em;
+      padding-left: 27px;
+      color: $agrofa-black;
+
+      >i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: $agrofa-base;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $agrofa-gray;
+      font-size: 14px;
+      color: $agrofa-black;
+      transition: all 500ms ease;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $agrofa-base;
+        color: $agrofa-white;
+      }
+    }
+  }
+}
+
+// team-skill-one css 
+.team-skills-one {
+  position: relative;
+  background-color: $agrofa-white;
+  padding: 118px 0 0 0;
+  @media (max-width: 991px) {
+    padding-top: 52px;
+  }
+  .container-fluid {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 118px;
+    @media (max-width: 991px) {
+      margin-bottom: 52px;
+    }
+  }
+
+  .section-common-title {
+    max-width: 810px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__chose-reasone {
+    flex-direction: column;
+    padding-bottom: 14px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 92px;
+    @media (max-width: 991px) { margin-bottom: 38px;}
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0 95px;
+  }
+  &__col-left {
+    width: calc(calc(50% - 47.5px) / 1);
+    padding: 0;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+  &__left-content {
+    width: 100%;
+    max-width:538px;
+    margin: 0 0 0 auto;
+    @media (max-width: 991px) {
+      max-width: initial;
+      margin: 0;
+    }
+    &__inner {
+      max-width: 488px;
+      @media (max-width: 991px) {
+        max-width: initial;
+      }
+    }
+  }
+
+  &__col-title {
+    font-size: $heading-size4;
+    line-height: 46px;
+    font-weight: 700;
+    color: $agrofa-green3;
+    margin-bottom: 35px;
+    br { display: none; }
+    @media (max-width: 991px) {
+      font-size: 28px;
+      line-height: 38px;
+      margin-bottom: 15px;
+    }
+    @media (min-width: 768px) {
+      br { display: block; }
+    }
+  }
+  
+  &__col-text {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 500;
+    color: $agrofa-text;
+    margin-bottom: 44px;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 26px;
+    }
+  }
+
+  &__progress {
+    border: 1px solid $agrofa-green3;
+    padding: 17px 40px 27px 33px;
+    margin-bottom: 52px;
+    @media (max-width: 991px) {
+      margin-bottom: 38px; 
+      padding: 12px 20px 22px 20px;
+    }
+    +.team-skills-one__progress {
+      margin-top: 17px;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 34px;
+      font-weight: 500;
+      color: $agrofa-text;
+      display: block;
+      margin-bottom: 19px;
+      @media (max-width: 991px) {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__bar {
+      width: 100%;
+      height: 11px;
+      position: relative;
+      border-radius: 5px;
+      background-color: $agrofa-yellow;
+    }
+
+    &__inner {
+      position: absolute;
+      height: calc(100% - 0px);
+      left: 0;
+      top: 0;
+      background-color: $agrofa-green3;
+      border-radius: 5px;
+      transition: all 700ms linear;
+      width: 0px;
+    }
+
+    &__number {
+      position: absolute;
+      bottom: calc(100% + 7px);
+      right: -18px;
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 500;
+      color: $agrofa-text;
+    }
+  }
+
+  &__customers {
+    border-top: 1px solid #edebe4;
+    padding-top: 33px;    
+    &__col {
+      @extend .food-one__col;
+      gap: 0 23px !important;
+      &:hover {
+        .team-skills-one__customers__cricle span {
+          color: $agrofa-text;
+        }
+      }
+    }
+    &__cricle {
+      @extend .food-one__cricle;
+      span {
+        font-family: $agrofa-heading-font;
+        font-size: 24px;
+        line-height: 1;
+        color: $agrofa-white;
+        transition: all 0.4s ease;
+      }
+      &:hover {
+        span {
+          color: $agrofa-text;
+        }
+      }
+    }
+    &__feedback {
+      @extend .food-one__quality-info-bx;
+      width: calc(calc(100% - 105px)) !important;
+    }
+  }
+
+  &__col-right {
+    width: calc(calc(50% - 47.5px) / 1);
+    padding: 0;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    &__all-product {
+      padding-top: 22px;
+      @media (max-width: 991px) {
+        padding-top: 40px;
+      }
+    }
+    &__bg {
+      min-height: 186px;
+      background-color: $agrofa-yellow;
+      width: fit-content;
+      max-width: 253px;
+      border-radius: 25px 0 25px 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 32px;
+      @media (max-width: 991px) {
+        width: 100%;
+        max-width: 100%;
+        min-height: 152px;
+      }
+    }
+    &__count-product {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1;
+      color: $agrofa-text;
+      margin-bottom: 16px;
+      @media (max-width: 991px) {
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+    }
+    &__pure-product {
+      font-size: 26px;
+      line-height: 26px;
+      font-weight: 500;
+      color: $agrofa-text;
+      margin-bottom: 0;
+      @media (max-width: 991px) {
+        font-size: 22px;
+        line-height: 24px;
+      }
+    }
+  }
+  
+  &__right-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: #fffdf1;
+    }
+
+    &__bg {
+      position: relative;
+      z-index: 2;
+      & > img {
+        display: block;
+        max-width: 864px;
+        margin-top: 110px;
+        -webkit-animation: mover 1s infinite  alternate;
+        animation: mover 1s infinite  alternate;
+      }
+      @media (max-width: 991px) { display: none; }
+    }
+    @-webkit-keyframes mover {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(25px); }
+    }
+    @keyframes mover {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(25px); }
+    }
+  }
+
+
+  &--two {
+    background-color: $agrofa-white;
+    z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 170px;
+      height: 162px;
+      left: 0;
+      bottom: 82px;
+      background-image: url('../images/shapes/team-skill-effect2-1-.png');
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 100% 100%;
+      -webkit-animation: skillEffect1 1s infinite  alternate;
+      animation: skillEffect1 1s infinite  alternate;
+      @-webkit-keyframes skillEffect1 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-25px); }
+      }
+      @keyframes skillEffect1 {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-25px); }
+      }
+      @media (max-width: 1440px) {
+        width: 100px;
+        height: 110px;
+        bottom: 50px;
+      }
+      @media (max-width: 991px) {
+        width: 82px;
+        height: 95px;
+        bottom: 0;
+        top: 0;
+        margin: auto 0;
+      }
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+    .container-fluid {
+      margin-bottom: 0;
+      padding-top: 90px;
+      padding-bottom: 120px;
+      @media (max-width: 991px) {
+        padding-top: 90px;
+        padding-bottom: 72px;
+      }
+      @media (max-width: 767px) {
+        padding-top: 8px;
+        padding-bottom: 58px;
+      }
+    }
+    .team-skills-one__row {
+      gap: 0;
+    }
+    .team-skills-one__col-left {
+      width: 51%;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+    }
+    .team-skills-one__left-content {
+      max-width: 600px;
+      @media (max-width: 991px) {
+        max-width: initial;
+      }
+      &__inner {
+        max-width: initial;
+      }
+    }
+    .section-common-title {
+      max-width: initial;
+      align-items: flex-start;
+    }
+    .team-skills-one__chose-reasone {
+      flex-direction: row;
+    }
+    .team-skills-one__title {
+      text-align: left;
+      margin-bottom: 43px;
+      @media (max-width: 767px) {
+        margin-bottom: 28px;
+      }
+    }
+    .team-skills-one__col-text {
+      font-weight: 400;
+      padding-right: 30px;
+      @media (max-width: 991px) {
+        padding-right: 0;
+      }
+    }
+    .team-skills-one__customers {
+      max-width: 502px;
+      @media (max-width: 991px) {
+        max-width: initial;
+      }
+      border-top: 0;
+      padding-top: 0;
+      &__col {
+        position: relative;
+        &:first-child::before {
+          display: none;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 105px;
+          height: 1px;
+          top: -34px;
+          left: 0;
+          z-index: 1;
+          background-color: $agrofa-white;
+        }
+      }
+      &__icon-cricle {
+        font-size: 49px;
+        color: $agrofa-white;
+        transition: all 0.5s;
+      }
+    }
+
+    .team-skills-one__col-right {
+      width: 49%;
+      display: flex;
+      align-items: flex-end;
+      @media (max-width: 991px) {
+        width: 100%;
+        padding-top: 30px;
+      }
+    }
+    .team-skills-one__col-right__all-product {
+      padding-top: 0;
+      padding-left: 22px;
+      @media (max-width: 991px) {
+        padding: 0;
+        width: 100%;
+      }
+    }
+    .team-skills-one__col-right__bg { border-radius: 20px; }
+    .team-skills-one__col-right__pure-product { line-height: 34px; }
+
+    .team-skills-one__right-image {
+      z-index: 1;
+      padding-left: 85px;
+      img {
+        margin-top: 0;
+        width: 100%;
+        max-width: initial;
+        height: 100%;
+        object-fit: cover;
+        -webkit-animation: teamSkillMoving 2.5s infinite alternate;
+        animation: teamSkillMoving 2.5s infinite alternate;
+        @keyframes teamSkillMoving {
+          0% {
+              transform: translateX(0);
+          }
+          25% {
+              transform: translateX(2px);
+          }
+          50% {
+              transform: translateX(4px);
+          }
+          75% {
+              transform: translateX(8px);
+          }
+          100% {
+              transform: translateX(15px);
+          }
+      }
+      }
+      &::after {
+        display: none;
+      }
+    }
+    .team-skills-one__right-image__bg {
+      height: 100%;
+      position: relative;
+      padding-bottom: 115px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background-image: url('../images/shapes/team-skill-effect2-2-.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+      }
+    }
+  }
+
+  &--three {
+    padding-top: 119px;
+    padding-bottom: 140px;
+    @media (max-width: 991px) {
+      padding-top: 52px;
+      padding-bottom: 58px;
+    }
+    .container {
+      @media (max-width: 1200px) {
+        max-width: 100%;
+      }
+    }
+    .team-skills-one__row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      gap: 0;
+
+      @media (max-width: 991px) {
+        gap: 100px 0;
+      }
+    }
+    .team-skills-one__col-left {
+      width: calc((50% - 0px) / 1);
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+    }
+    .team-skills-one__left-content {
+      max-width: initial;
+      margin: 0;
+      padding-right: 40px;
+      @media (max-width: 991px) {
+        padding-right: 0;
+      }
+    }
+    .team-skills-one__col-right {
+      width: calc((50% - 0px) / 1);
+      padding-left: 40px;
+      position: relative;
+      @media (max-width: 991px) {
+        width: 100%;
+        max-width: 475px;
+        margin: 0 auto;
+        height: calc(600px + 2px);
+        padding-left: 8px;
+      }
+    
+      &__all-product {
+        position: absolute;
+        top: -40px;
+        left: -4px;
+        z-index: 2;
+        padding-top: 0;
+      }
+      .right-top--product {
+        right: -78px;
+        left: initial;
+        @media (max-width: 1400px) {
+          right: 0;
+          top: -50px;
+        }
+      }
+      .left-bottom--product {
+        right: initial;
+        top: initial;
+        bottom: 58px;
+        .team-skills-one__col-right__bg {
+          background-color: $agrofa-green;
+          border-radius: 0px 25px 25px 25px;
+        }
+        .team-skills-one__col-right__pure-product,
+        .team-skills-one__col-right__count-product {
+          color: $agrofa-white;
+        }
+      }
+    }
+    .team-skills-one__col-right__pure-product {
+      line-height: 34px;
+      @media (max-width: 991px) {
+        line-height: 26px;
+      }
+    }
+    .team-skills-three__img {
+      width: calc(100% + 0px);
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 38px;
+      margin-top: -6px;
+      @media (max-width: 1200px) {
+        padding-left: 25px;
+      }
+      @media (max-width: 991px) {
+        height: 100%;
+        padding: 0 10px;
+      }
+      img {
+        width: 100% !important;
+        max-width: 428px;
+        display: block;
+        height: auto;
+        border-radius: 220px;
+        -webkit-box-shadow: 17px 6px 0px 14px #F5F4EE; 
+        box-shadow: 17px 6px 0px 14px #F5F4EE;
+        @media (max-width: 1200px) {
+          max-width: 100%;
+        }
+        @media (max-width: 991px) {
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border: 1px solid transparent;
+        border-radius: 220px;
+      }
+      &::before {
+        left: initial;
+        right: 28px;
+        width: 455px;
+        height: 672px;
+        top: -26px;
+        border-color: $agrofa-green;
+        border-radius: 240px;
+        @media (max-width: 1200px) {
+          width: 100%;
+          height: 100%;
+          right: 14px;
+        }
+        @media (max-width: 991px) {
+          right: 5px;
+        }
+      }
+      &::after {
+        width: 431px;
+        height: 637px;
+        top: -21px;
+        right: initial;
+        left: 53px;
+        border-color: $agrofa-yellow;
+        @media (max-width: 1200px) {
+          width: 100%;
+          height: 100%;
+          left: 5px;
+        }
+        @media (max-width: 991px) {
+          left: 2px;
+        }
+      }
+    }
+  }
+
+  &--about {
+    padding-top: 119px;
+    @media (max-width: 991px) {
+      padding-top: 52px;
+    }
+  }
+}
+// end team skill
+
+.team-form-one {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    opacity: 0.8;
+    mix-blend-mode: luminosity;
+  }
+
+  .container {
+    position: relative;
+    max-width: 800px;
+  }
+
+  .sec-title {
+    text-align: center;
+  }
+
+  .form-one {
+
+    .bootstrap-select>.dropdown-toggle,
+    input[type=text],
+    input[type=email],
+    textarea {
+      background-color: $agrofa-white;
+    }
+
+    textarea {
+      height: 188px;
+    }
+  }
+}
